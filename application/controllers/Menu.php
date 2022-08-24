@@ -101,7 +101,7 @@ class Menu extends CI_Controller
         $this->db->where('id', $id);
         $this->db->update('user_menu', $data);
         $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Success edit menu!</div>');
-        redirect('menu/submenu');
+        redirect('menu');
     }
 
     public function subdelete($id)
