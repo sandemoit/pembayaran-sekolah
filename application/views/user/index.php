@@ -15,7 +15,7 @@
                     </div>
                     <div class="card-header text-center border-0 pt-0 pt-lg-2 pb-4 pb-lg-0">
                         <div class="d-flex justify-content-center mt-3">
-                            <a href="<?= site_url('user/changepassword'); ?>" class="btn btn-sm btn-dark float-right mb-0 d-none d-lg-block">change Password</a>
+                            <a href="<?= site_url('user/changepassword'); ?>" class="btn btn-sm btn-dark float-right mb-0 d-none d-lg-block">Change Password</a>
                             <a href="<?= site_url('user/changepassword'); ?>" class="btn btn-sm btn-dark float-right mb-0 d-block d-lg-none"><i class="ni ni-email-83"></i></a>
                         </div>
                     </div>
@@ -78,19 +78,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Password</label>
-                                    <input class="form-control" name="password1" id="password1" type="password" value="Jesse">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Konfirmasi Password</label>
-                                    <input class="form-control" name="password2" name="password2" type="password" value="Lucky">
-                                    <span><small class="text-danger">Kosongkan jika tidak merubah password</small></span>
-                                </div>
-                            </div> -->
                         </div>
                         </form>
                     </div>
