@@ -8,3 +8,6 @@ password: admin
 
 DEVELOPER
 buat dlu
+
+JANGAN LUPA MAKAN
+test push lewat vscode
