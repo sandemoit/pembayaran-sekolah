@@ -4,8 +4,7 @@ CAPEKKKKKKKKK
 
 ADMIN
 email: sandimaulidika@gmail.com
-password: 1234
+password: admin
 
 DEVELOPER
-email: infosandemo@gmail.com
-password: 1234
+buat dlu
