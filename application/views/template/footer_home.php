@@ -1,10 +1,5 @@
-<footer class="site-footer">
-    <div class="particles-snow" id="footer-snow"></div><!-- /#footer-snow.particles-snow -->
+<footer class="site-footer site-footer__home-three">
 
-    <img src="assets/images/shapes/footer-shape-1-1.png" class="site-footer__bg-shape-1" alt="">
-    <img src="assets/images/shapes/footer-shape-1-2.png" class="site-footer__bg-shape-2" alt="">
-    <img src="assets/images/shapes/footer-shape-1-3.png" class="site-footer__bg-shape-3" alt="">
-    <img src="assets/images/shapes/footer-shape-1-4.png" class="site-footer__bg-shape-4" alt="">
     <div class="site-footer__upper">
         <div class="container">
             <div class="row">
@@ -70,8 +65,6 @@
     </div><!-- /.site-footer__bottom -->
 
 </footer><!-- /.site-footer -->
-
-
 
 </div><!-- /.page-wrapper -->
 

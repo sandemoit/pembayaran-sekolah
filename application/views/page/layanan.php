@@ -99,10 +99,10 @@
         <img src="assets/images/shapes/footer-shape-1-1.png" class="page-header__bg-shape-3" alt="">
         <img src="assets/images/shapes/footer-shape-1-3.png" class="page-header__bg-shape-4" alt="">
         <div class="container text-center">
-            <h2>About Us 2</h2>
+            <h2>Services</h2>
             <ul class="list-unstyled thm-breadcrumb">
                 <li><a href="index.html">Home</a></li>
-                <li><span>About Page</span></li>
+                <li><span>Services</span></li>
             </ul><!-- /.thm-breadcrumb -->
         </div><!-- /.container text-center -->
     </section><!-- /.page-header -->
@@ -174,74 +174,6 @@
         </div><!-- /.container -->
     </section><!-- /.service-one -->
 
-    <section class="about-one">
-        <img src="assets/images/shapes/bg-shape-1-1.png" class="error-404__bg-shape-1" alt="">
-        <img src="assets/images/shapes/bg-shape-1-2.png" class="error-404__bg-shape-2" alt="">
-        <img src="assets/images/shapes/bg-shape-1-3.png" class="error-404__bg-shape-3" alt="">
-
-        <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
-        <div class="error-404__bubble-2"></div><!-- /.error-404__bubble-2 -->
-        <div class="error-404__bubble-3"></div><!-- /.error-404__bubble-3 -->
-        <div class="error-404__bubble-4"></div><!-- /.error-404__bubble-4 -->
-        <div class="error-404__bubble-5"></div><!-- /.error-404__bubble-5 -->
-        <div class="error-404__bubble-6"></div><!-- /.error-404__bubble-6 -->
-        <div class="error-404__bubble-7"></div><!-- /.error-404__bubble-7 -->
-        <div class="error-404__bubble-8"></div><!-- /.error-404__bubble-8 -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-one__content">
-                        <div class="block-title text-left">
-                            <p class="color-2"><span>Why Choose Us?</span></p>
-                            <h3>There Are Many SEO Sites <br> <span>But Why Choose Us?</span></h3>
-                        </div><!-- /.block-title text-center -->
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod <br> tempor
-                            incididunt labore.</p>
-                        <div class="about-one__box-wrapper">
-                            <div class="about-one__box">
-                                <div class="about-one__box-icon">
-                                    <i class="fa fa-check"></i>
-                                </div><!-- /.about-one__box-icon -->
-                                <div class="about-one__box-content">
-                                    <h3>Best Performence</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br> eiusmod tempor
-                                        incididunt ut labore.</p>
-                                </div><!-- /.about-one__box-content -->
-                            </div><!-- /.about-one__box -->
-                            <div class="about-one__box">
-                                <div class="about-one__box-icon">
-                                    <i class="fa fa-check"></i>
-                                </div><!-- /.about-one__box-icon -->
-                                <div class="about-one__box-content">
-                                    <h3>Dedicated Team Member</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br> eiusmod tempor
-                                        incididunt ut labore.</p>
-                                </div><!-- /.about-one__box-content -->
-                            </div><!-- /.about-one__box -->
-                            <div class="about-one__box">
-                                <div class="about-one__box-icon">
-                                    <i class="fa fa-check"></i>
-                                </div><!-- /.about-one__box-icon -->
-                                <div class="about-one__box-content">
-                                    <h3>24/7 Hours Support</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br> eiusmod tempor
-                                        incididunt ut labore.</p>
-                                </div><!-- /.about-one__box-content -->
-                            </div><!-- /.about-one__box -->
-                        </div><!-- /.about-one__box-wrapper -->
-                    </div><!-- /.about-one__content -->
-                </div><!-- /.col-lg-6 -->
-                <div class="col-lg-6 d-flex">
-                    <div class="my-auto">
-                        <div class="about-one__image wow slideInDown" data-wow-duration="1500ms">
-                            <img src="assets/images/mocups/about-1-moc-1.png" alt="">
-                        </div><!-- /.about-one__image -->
-                    </div><!-- /.my-auto -->
-                </div><!-- /.col-lg-6 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.about-one -->
-
     <section class="cta-one">
         <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
 
@@ -256,57 +188,68 @@
         </div><!-- /.container -->
     </section><!-- /.cta-one -->
 
-
-    <section class="testimonials-one">
+    <section class="pricing-one">
         <div class="container">
             <div class="block-title text-center">
-                <p class="color-2"><span>Our Testimonial</span></p>
-                <h3>We Care Client’s Issues <br> <span>So We are Popular.</span></h3>
+                <p class="color-2"><span>Pricing Plan</span></p>
+                <h3>No Any Hidden Charge Select <br> <span>Your Pricing Plan</span></h3>
             </div><!-- /.block-title text-center -->
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="testimonials-one__single">
-                        <div class="testimonials-one__icon">
-                            <img src="assets/images/shapes/testi-qoute-1-1.png" alt="">
-                        </div><!-- /.testimonials-one__icon -->
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
-                        <h3>Derek Baldwin</h3>
-                    </div><!-- /.testimonials-one__single -->
-                </div><!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="testimonials-one__single">
-                        <div class="testimonials-one__icon">
-                            <img src="assets/images/shapes/testi-qoute-1-1.png" alt="">
-                        </div><!-- /.testimonials-one__icon -->
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
-                        <h3>Charles Morris</h3>
-                    </div><!-- /.testimonials-one__single -->
-                </div><!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="testimonials-one__single">
-                        <div class="testimonials-one__icon">
-                            <img src="assets/images/shapes/testi-qoute-1-1.png" alt="">
-                        </div><!-- /.testimonials-one__icon -->
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
-                        <h3>Eula Rowe</h3>
-                    </div><!-- /.testimonials-one__single -->
-                </div><!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="testimonials-one__single">
-                        <div class="testimonials-one__icon">
-                            <img src="assets/images/shapes/testi-qoute-1-1.png" alt="">
-                        </div><!-- /.testimonials-one__icon -->
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
-                        <h3>Jose Flores</h3>
-                    </div><!-- /.testimonials-one__single -->
-                </div><!-- /.col-lg-6 -->
+
+            <div class="row high-gutters">
+                <div class="col-lg-4 wow fadeInLeft" data-wow-duration="1500ms">
+                    <div class="pricing-one__single">
+                        <div class="pricing-one__icon">
+                            <img src="assets/images/shapes/pricing-icon-1-1.png" alt="">
+                        </div><!-- /.pricing-one__icon -->
+                        <h3>Basic Pack</h3>
+                        <ul class="pricing-one__list list-unstyled">
+                            <li>2gb Hosting</li>
+                            <li>10 Custom Domain</li>
+                            <li>SSD Hosting</li>
+                            <li class="disabled">50 gb Bandwith</li>
+                            <li class="disabled">Free Support</li>
+                        </ul><!-- /.pricing-one__list list-unstyled -->
+                        <p>$19.00</p>
+                        <a href="#" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
+                    </div><!-- /.pricing-one__single -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 wow fadeInUp" data-wow-duration="1500ms">
+                    <div class="pricing-one__single">
+                        <div class="pricing-one__icon">
+                            <img src="assets/images/shapes/pricing-icon-1-2.png" alt="">
+                        </div><!-- /.pricing-one__icon -->
+                        <h3>Standard Pack</h3>
+                        <ul class="pricing-one__list list-unstyled">
+                            <li>2gb Hosting</li>
+                            <li>10 Custom Domain</li>
+                            <li>SSD Hosting</li>
+                            <li>50 gb Bandwith</li>
+                            <li class="disabled">Free Support</li>
+                        </ul><!-- /.pricing-one__list list-unstyled -->
+                        <p>$29.00</p>
+                        <a href="#" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
+                    </div><!-- /.pricing-one__single -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 wow fadeInRight" data-wow-duration="1500ms">
+                    <div class="pricing-one__single">
+                        <div class="pricing-one__icon">
+                            <img src="assets/images/shapes/pricing-icon-1-3.png" alt="">
+                        </div><!-- /.pricing-one__icon -->
+                        <h3>Premium Pack</h3>
+                        <ul class="pricing-one__list list-unstyled">
+                            <li>2gb Hosting</li>
+                            <li>10 Custom Domain</li>
+                            <li>SSD Hosting</li>
+                            <li>50 gb Bandwith</li>
+                            <li>Free Support</li>
+                        </ul><!-- /.pricing-one__list list-unstyled -->
+                        <p>$39.00</p>
+                        <a href="#" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
+                    </div><!-- /.pricing-one__single -->
+                </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
-    </section><!-- /.testimonials-one -->
+    </section><!-- /.pricing-one -->
 
 
     <section class="brand-one brand-one__service-page">
@@ -347,37 +290,23 @@
         </div><!-- /.container -->
     </section><!-- /.brand-one -->
 
-
-    <section class="contact-one">
-        <div class="container wow fadeInUp" data-wow-duration="1500ms">
+    <section class="mailchimp-one">
+        <div class="container">
             <div class="inner-container">
-                <img src="assets/images/shapes/contact-form-shape-1-1.png" class="contact-one__shape-1" alt="">
-                <img src="assets/images/mocups/contact-1-moc-1.png" class="contact-one__shape-2" alt="">
-                <img src="assets/images/mocups/contact-1-moc-2.png" class="contact-one__shape-3" alt="">
-                <div class="block-title text-center">
-                    <p><span>Analysis</span></p>
-                    <h3>Get Free SEO Analysis?</h3>
-                </div><!-- /.block-title text-center -->
-                <form action="assets/inc/sendemail.php" class="contact-one__form">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input type="text" placeholder="Your Name*">
-                        </div><!-- /.col-md-6 -->
-                        <div class="col-md-6">
-                            <input type="text" placeholder="Email*">
-                        </div><!-- /.col-md-6 -->
-                        <div class="col-md-6">
-                            <input type="text" placeholder="Website*">
-                        </div><!-- /.col-md-6 -->
-                        <div class="col-md-6">
-                            <input type="text" placeholder="Subject">
-                        </div><!-- /.col-md-6 -->
-                        <div class="col-md-12 text-center">
-                            <button type="submit" class="thm-btn contact-one__btn">Send Now</button>
-                        </div><!-- /.col-md-12 -->
-                    </div><!-- /.row -->
-                </form><!-- /.contact-one__form -->
+                <img src="assets/images/mocups/subscribe-moc-1-1.png" class="mailchimp-one__moc-1" alt="">
+                <img src="assets/images/mocups/subscribe-moc-1-2.png" class="mailchimp-one__moc-2" alt="">
 
+                <img src="assets/images/shapes/subscribe-dot-1-1.png" class="mailchimp-one__bg-shape-1" alt="">
+                <img src="assets/images/shapes/subscribe-shape-1-1.png" class="mailchimp-one__bg-shape-2" alt="">
+                <div class="block-title text-center">
+                    <p><span>Newsletter</span></p>
+                    <h3>Signup for Our Latest <br> <span>Update</span></h3>
+                </div><!-- /.block-title text-center -->
+                <form action="#" class="mailchimp-one__form">
+                    <input type="text" name="email" placeholder="Enter your email">
+                    <button type="submit" class="thm-btn mailchimp-one__btn">Subscribe Now</button>
+                    <!-- /.thm-btn mailchimp-one__btn -->
+                </form><!-- /.mailchimp-one__form -->
             </div><!-- /.inner-container -->
         </div><!-- /.container -->
-    </section><!-- /.contact-one -->
+    </section><!-- /.mailchimp-one -->
