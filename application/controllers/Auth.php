@@ -107,18 +107,19 @@ class Auth extends CI_Controller
     {
         $config = [
             'protocol'  => 'smtp',
-            'smtp_host' => 'sandemo.site',
-            'smtp_user' => 'ssl://smtp.service@sandemo.site',
-            'smtp_pass' => 'service@sandemo.site',
+            'smtp_host' => EMAIL_HOST,
+            'smtp_user' => EMAIL_ALAMAT,
+            'smtp_pass' => EMAIL_PASSWORD,
             'smtp_port' => 465,
             'mailtype'  => 'html',
             'charset'   => 'utf-8',
+            'smtp_crypto' => 'ssl',
             'newline'   => "\r\n"
         ];
 
         $this->load->library('email', $config);
 
-        $this->email->from('service@sandemo.site', 'Service SANDEMO');
+        $this->email->from(EMAIL_ALAMAT, EMAIL_NAMA);
         $this->email->to($this->input->post('email'));
         $this->email->subject('Account Verification');
         $this->email->message('Click this link to');
