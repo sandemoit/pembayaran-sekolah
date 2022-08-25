@@ -106,6 +106,14 @@ class Admin extends CI_Controller
         redirect('admin/role');
     }
 
+    public function userdelete($id)
+    {
+        $where = array('id' => $id);
+        $this->Admin_model->delete($where, 'user');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Success delete account!</div>');
+        redirect('admin/user');
+    }
+
     public function user()
     {
         $data['title'] = 'User';

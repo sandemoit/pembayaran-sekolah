@@ -30,6 +30,7 @@
                                     <th class="text-center">Nama</th>
                                     <th class="text-center">Email</th>
                                     <th class="text-center">Role</th>
+                                    <th class="text-center">Status</th>
                                     <th class="text-center" style="width: 20%;">Aksi</th>
                                 </tr>
                             </thead>
@@ -52,12 +53,13 @@
                                             <?php endif ?>
                                         </td>
                                         <td class="text-center">
-                                            <a href="" class="btn btn-warning btn-icon-split" data-bs-toggle="modal" data-bs-target="#editrolemodal<?= $u['id'] ?>">
-                                                <span class="icon text-white-50">
-                                                    <i class="fas fa-pen"></i>
-                                                </span>
-                                                <span class="text">Edit</span>
-                                            </a>
+                                            <?php if ($u['is_active'] == 1) : ?>
+                                                <span class="badge badge-sm bg-gradient-success">Active</span>
+                                            <?php else : ?>
+                                                <span class="badge badge-sm bg-gradient-danger">Isactive</span>
+                                            <?php endif ?>
+                                        </td>
+                                        <td class="text-center">
                                             <a href="#" class="btn btn-danger btn-icon-split" data-bs-toggle="modal" data-bs-target="#hapusmodal<?= $u['id'] ?>">
                                                 <span class="icon text-white-50">
                                                     <i class="fas fa-trash"></i>
@@ -77,8 +79,8 @@
         </div>
         <!-- /.container-fluid -->
 
-        <!-- Modal Add
-        <div class="modal fade" id="newrolemodal" tabindex="-1" role="dialog" aria-labelledby="newrolemodal" aria-hidden="true">
+        <!-- Modal Add -->
+        <!-- <div class="modal fade" id="newrolemodal" tabindex="-1" role="dialog" aria-labelledby="newrolemodal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -100,57 +102,27 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-
-        Modal edit
-        <?php foreach ($role as $r) : ?>
-            <div class="modal fade" id="editrolemodal<?= $r['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="editrolemodal<?= $r['id'] ?>" aria-hidden="true">
+        <!-- modal hapus -->
+        <?php foreach ($user as $u) : ?>
+            <div class="modal fade" id="hapusmodal<?= $u['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="hapusmodal<?= $u['id'] ?>" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="editrolemodal<?= $r['id'] ?>">Add New Role Name</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <form action="<?php echo base_url('admin/edit') ?>" method="POST">
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <input class="form-control" type="hidden" id="id" name="id" value="<?= $r['id']; ?>">
-                                    <input class="form-control" type="text" id="role" name="role" value="<?= $r['role']; ?>">
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn bg-gradient-info">Save changes</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-
-
-        modal hapus
-        <?php foreach ($role as $r) : ?>
-            <div class="modal fade" id="hapusmodal<?= $r['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="hapusmodal<?= $r['id'] ?>" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="hapusmodal<?= $r['id'] ?>">Sure on Delete?</h5>
+                            <h5 class="modal-title" id="hapusmodal<?= $u['id'] ?>">Sure on Delete?</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p class="text-danger">Menghapus Data Role : <b><?= $r['role']; ?></b></p>
+                            <p class="text-danger">Menghapus Data Akun : <b><?= $u['name']; ?></b></p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
-                            <a class="btn bg-gradient-danger" href="<?= base_url('admin/delete/') . $r['id']; ?>">Delete</a>
+                            <a class="btn bg-gradient-danger" href="<?= base_url('admin/userdelete/') . $u['id']; ?>">Delete</a>
                         </div>
                     </div>
                 </div>
             </div>
-        <?php endforeach; ?> -->
+        <?php endforeach; ?>

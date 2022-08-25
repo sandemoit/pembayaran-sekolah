@@ -10,8 +10,8 @@
                             <button type="submit" class="btn btn-primary btn-sm ms-auto">Save Changes</button>
                         </div>
                     </div>
-                    <?= $this->session->flashdata('message'); ?>
                     <div class="card-body">
+                        <?= $this->session->flashdata('message'); ?>
                         <form action="<?= base_url('user/changepassword'); ?>" method="post">
                             <div class="row">
                                 <div class="col-md-12">

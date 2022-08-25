@@ -94,41 +94,9 @@ class Auth extends CI_Controller
                 'date_created' => time()
             ];
 
-            // $this->db->insert('user', $data);
-
-            $this->_sendEmail();
-
+            $this->db->insert('user', $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Congratulation! your account has been created. Please activate your account</div>');
             redirect('auth');
-        }
-    }
-
-    private function _sendEmail()
-    {
-        $config = [
-            'protocol'  => 'smtp',
-            'smtp_host' => EMAIL_HOST,
-            'smtp_user' => EMAIL_ALAMAT,
-            'smtp_pass' => EMAIL_PASSWORD,
-            'smtp_port' => 465,
-            'mailtype'  => 'html',
-            'charset'   => 'utf-8',
-            'smtp_crypto' => 'ssl',
-            'newline'   => "\r\n"
-        ];
-
-        $this->load->library('email', $config);
-
-        $this->email->from(EMAIL_ALAMAT, EMAIL_NAMA);
-        $this->email->to($this->input->post('email'));
-        $this->email->subject('Account Verification');
-        $this->email->message('Click this link to');
-
-        if ($this->email->send()) {
-            return true;
-        } else {
-            echo $this->email->print_debugger();
-            die;
         }
     }
 
