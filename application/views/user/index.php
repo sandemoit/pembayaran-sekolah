@@ -15,8 +15,8 @@
                     </div>
                     <div class="card-header text-center border-0 pt-0 pt-lg-2 pb-4 pb-lg-0">
                         <div class="d-flex justify-content-center mt-3">
-                            <a href="javascript:;" class="btn btn-sm btn-dark float-right mb-0 d-none d-lg-block">Coming Soon</a>
-                            <a href="javascript:;" class="btn btn-sm btn-dark float-right mb-0 d-block d-lg-none"><i class="ni ni-email-83"></i></a>
+                            <a href="<?= site_url('user/changepassword'); ?>" class="btn btn-sm btn-dark float-right mb-0 d-none d-lg-block">change Password</a>
+                            <a href="<?= site_url('user/changepassword'); ?>" class="btn btn-sm btn-dark float-right mb-0 d-block d-lg-none"><i class="ni ni-email-83"></i></a>
                         </div>
                     </div>
                     <div class="card-body pt-0">
@@ -36,42 +36,62 @@
             </div>
             <div class="col-md-8  mb-lg-0 mb-5">
                 <div class="card">
+
+                    <?php echo form_open_multipart('user'); ?>
                     <div class="card-header pb-0">
                         <div class="d-flex align-items-center">
                             <p class="mb-0">Edit Profile</p>
-                            <a class="btn btn-primary btn-sm ms-auto" type="submit" href="#">Save Changes</a>
+                            <button type="submit" class="btn btn-primary btn-sm ms-auto">Save Changes</button>
                         </div>
                     </div>
                     <div class="card-body">
                         <p class="text-uppercase text-sm">User Information</p>
-                        <form action="" method="POST">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Name</label>
-                                        <input class="form-control" name="name" id="name" type="text" value="lucky.jesse">
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="form-control-label">Full Name</label>
+                                    <input class="form-control" name="name" id="name" type="text" value="<?= $user['name']; ?>">
+                                    <?= form_error('name', '<small class="text-danger" pl-3>', '</small>'); ?>
+                                    <?= $this->session->flashdata('message'); ?>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Email address</label>
-                                        <input class="form-control" name="email" id="email" type="text" value="jesse@example.com">
-                                    </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="form-control-label">Email address</label>
+                                    <input class="form-control" name="email" id="email" type="text" value="<?= $user['email']; ?>" readonly>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Password</label>
-                                        <input class="form-control" name="password1" id="password1" type="password" value="Jesse">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Konfirmasi Password</label>
-                                        <input class="form-control" name="password2" name="password2" type="password" value="Lucky">
-                                        <span><small class="text-danger">Kosongkan jika tidak merubah password</small></span>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <label class="custom-file-label col-sm-2">Picture</label>
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="custom-file">
+                                                    <input type="file" id="image" name="image" class="form-control" id="image">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="example-text-input" class="form-control-label">Password</label>
+                                    <input class="form-control" name="password1" id="password1" type="password" value="Jesse">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="example-text-input" class="form-control-label">Konfirmasi Password</label>
+                                    <input class="form-control" name="password2" name="password2" type="password" value="Lucky">
+                                    <span><small class="text-danger">Kosongkan jika tidak merubah password</small></span>
+                                </div>
+                            </div> -->
+                        </div>
                         </form>
                     </div>
                 </div>

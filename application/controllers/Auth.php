@@ -11,6 +11,9 @@ class Auth extends CI_Controller
 
     public function index()
     {
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
@@ -63,6 +66,9 @@ class Auth extends CI_Controller
 
     public function registration()
     {
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
             'is_unique' => 'Email sudah terdaftar!'
@@ -84,13 +90,44 @@ class Auth extends CI_Controller
                 'image' => 'default.jpg',
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
                 'role_id' => 2,
-                'is_active' => 1,
+                'is_active' => 0,
                 'date_created' => time()
             ];
 
-            $this->db->insert('user', $data);
+            // $this->db->insert('user', $data);
+
+            $this->_sendEmail();
+
             $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Congratulation! your account has been created. Please activate your account</div>');
             redirect('auth');
+        }
+    }
+
+    private function _sendEmail()
+    {
+        $config = [
+            'protocol'  => 'smtp',
+            'smtp_host' => 'sandemo.site',
+            'smtp_user' => 'ssl://smtp.service@sandemo.site',
+            'smtp_pass' => 'service@sandemo.site',
+            'smtp_port' => 465,
+            'mailtype'  => 'html',
+            'charset'   => 'utf-8',
+            'newline'   => "\r\n"
+        ];
+
+        $this->load->library('email', $config);
+
+        $this->email->from('service@sandemo.site', 'Service SANDEMO');
+        $this->email->to($this->input->post('email'));
+        $this->email->subject('Account Verification');
+        $this->email->message('Click this link to');
+
+        if ($this->email->send()) {
+            return true;
+        } else {
+            echo $this->email->print_debugger();
+            die;
         }
     }
 

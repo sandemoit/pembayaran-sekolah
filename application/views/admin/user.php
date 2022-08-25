@@ -39,7 +39,9 @@
                                     <tr>
                                         <td class="text-center"><?= $i; ?></td>
                                         <td>
-                                            <img class="avatar avatar-sm rounded-circle me-2" src="<?= base_url('assets/img/profile/') . $u['image']; ?>" alt=""><?= $u['name']; ?>
+                                            <div class="d-flex px-2 py-1">
+                                                <img class="avatar avatar-sm me-3" src="<?= base_url('assets/img/profile/') . $u['image']; ?>" alt=""><?= $u['name']; ?>
+                                            </div>
                                         </td>
                                         <td class="text-center"><?= $u['email']; ?></td>
                                         <td class="text-center">
