@@ -51,15 +51,15 @@ class Auth extends CI_Controller
                         redirect('user');
                     }
                 } else {
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger text-white" role="alert">Wrong password!</div>');
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger text-white text-center" role="alert">Wrong password!</div>');
                     redirect('auth');
                 }
             } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger text-white" role="alert">This email has not been activated!</div>');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger text-white text-center" role="alert">This email has not been activated!</div>');
                 redirect('auth');
             }
         } else {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger text-white" role="alert">Email is not register</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-danger text-white text-center" role="alert">Email is not register</div>');
             redirect('auth');
         }
     }
@@ -118,7 +118,7 @@ class Auth extends CI_Controller
 
             $this->_sendEmail($token, 'verify');
 
-            // $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Congratulation! your account has been created. Please activate your account</div>');
+            // $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Congratulation! your account has been created. Please activate your account</div>');
             redirect('auth/success');
         }
     }
@@ -194,14 +194,14 @@ class Auth extends CI_Controller
             $user_token = $this->db->get_where('user_token', ['token' => $token])->row_array();
 
             if ($user_token) {
-                if (time() - $user_token['date_created'] < (60 * 20)) {
+                if (time() - $user_token['date_created'] < (60 * 60 * 24)) {
                     $this->db->set('is_active', 1);
                     $this->db->where('email', $email);
                     $this->db->update('user');
 
                     $this->db->delete('user_token', ['email' => $email]);
 
-                    $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">' . $email . ' has been activated! Please login.</div>');
+                    $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">' . $email . ' has been activated! Please login.</div>');
                     redirect('auth');
                 } else {
                     $this->db->delete('user', ['email' => $email]);
@@ -224,7 +224,7 @@ class Auth extends CI_Controller
     {
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('role_id');
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">You have been logout</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">You have been logout</div>');
         redirect('auth');
     }
 
@@ -256,10 +256,10 @@ class Auth extends CI_Controller
                 $this->db->insert('user_token', $user_token);
                 $this->_sendEmail($token, 'forgot');
 
-                $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Please check your email to reset your password!</div>');
+                $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Please check your email to reset your password!</div>');
                 redirect('auth/forgotpassword');
             } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger text-white" role="alert">Email is not registered or activated!</div>');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger text-white text-center" role="alert">Email is not registered or activated!</div>');
                 redirect('auth/forgotpassword');
             }
         }
@@ -290,7 +290,7 @@ class Auth extends CI_Controller
 
             $this->db->delete('user_token', ['email' => $email]);
 
-            $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Password has been changed! Please login.</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Password has been changed! Please login.</div>');
             redirect('auth');
         }
     }
@@ -309,11 +309,11 @@ class Auth extends CI_Controller
                 $this->session->set_userdata('reset_email', $email);
                 $this->changePassword();
             } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger text-white" role="alert">Reset password failed! Wrong token.</div>');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger text-white text-center" role="alert">Reset password failed! Wrong token.</div>');
                 redirect('auth');
             }
         } else {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger text-white" role="alert">Reset password failed! Wrong email.</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-danger text-white text-center" role="alert">Reset password failed! Wrong email.</div>');
             redirect('auth');
         }
     }

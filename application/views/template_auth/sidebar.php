@@ -20,9 +20,8 @@
     $menu = $this->db->query($queryMenu)->result_array();
     ?>
 
-    <div class="collapse navbar-collapse w-auto h-auto ps" id="sidenav-collapse-main">
+    <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
         <ul class="navbar-nav">
-
             <!-- looping menu -->
             <?php foreach ($menu as $m) : ?>
                 <li class="nav-item mt-3">
@@ -39,6 +38,7 @@
                             AND `user_sub_menu`.`is_active` = 1 ";
                 $subMenu = $this->db->query($querySubMenu)->result_array();
                 ?>
+
                 <?php foreach ($subMenu as $sm) : ?>
                     <li class="nav-item">
                         <?php if ($title == $sm['title']) : ?>
@@ -55,14 +55,11 @@
                 <?php endforeach; ?>
                 <hr class="horizontal dark mt-3">
             <?php endforeach; ?>
+        </ul>
+    </div>
 
-            <div class="sidenav-footer mx-3 my-3">
-                <a href="<?php echo site_url('auth/logout') ?>" class="btn btn-dark btn-sm w-100 mb-3">Logout</a>
-            </div>
-            <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-                <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-            </div>
-            <div class="ps__rail-y" style="top: 0px; height: 672px; right: 0px;">
-                <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 398px;"></div>
-            </div>
+
+    <div class="sidenav-footer mx-3 my-3">
+        <a href="<?php echo site_url('auth/logout') ?>" class="btn btn-dark btn-sm w-100 mb-3">Logout</a>
+    </div>
 </aside>

@@ -78,7 +78,7 @@ class Menu extends CI_Controller
 
         $this->db->where('id', $id);
         $this->db->update('user_menu', $data);
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert text-center">Success edit menu!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert text-center">Success edit menu!</div>');
         redirect('menu');
     }
 
@@ -100,7 +100,7 @@ class Menu extends CI_Controller
 
         $this->db->where('id', $id);
         $this->db->update('user_sub_menu', $data);
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert text-center">Success edit submenu!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert text-center">Success edit submenu!</div>');
         redirect('menu/submenu');
     }
 
@@ -108,7 +108,7 @@ class Menu extends CI_Controller
     {
         $where = array('id' => $id);
         $this->Menu_model->delete($where, 'user_sub_menu');
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert text-center">Success delete submenu!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert text-center">Success delete submenu!</div>');
         redirect('menu/submenu');
     }
 }
