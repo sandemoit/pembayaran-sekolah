@@ -89,7 +89,7 @@ class User extends CI_Controller
                     $this->db->where('email', $this->session->userdata('email'));
                     $this->db->update('user');
 
-                    $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Password changed! Please login</div>');
+                    $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Success change password!</div>');
                     redirect('user/changepassword');
                 }
             }

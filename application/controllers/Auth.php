@@ -300,11 +300,11 @@ class Auth extends CI_Controller
                 $this->session->set_userdata('reset_email', $email);
                 $this->changePassword();
             } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Reset password failed! Wrong token.</div>');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger text-white" role="alert">Reset password failed! Wrong token.</div>');
                 redirect('auth');
             }
         } else {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Reset password failed! Wrong email.</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-danger text-white" role="alert">Reset password failed! Wrong email.</div>');
             redirect('auth');
         }
     }
