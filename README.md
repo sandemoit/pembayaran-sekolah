@@ -30,13 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter">
-    <img src="https://raw.githubusercontent.com/agungksidik/public-assets/master/logo/laravel-logo.png" alt="Logo" width="90" height="90">
-  </a>
-  <a href="https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter">
-    <img src="https://raw.githubusercontent.com/agungksidik/public-assets/master/logo/inertiajs-logo.png" alt="Logo" width="90" height="90">
-  </a>
-  <a href="https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter">
-    <img src="https://raw.githubusercontent.com/agungksidik/public-assets/master/logo/reactjs-logo.png" alt="Logo" width="90" height="90">
+    <img src="https://histla.com/wp-content/uploads/2015/02/Codeigniter.png" alt="Logo" width="90" height="90">
   </a>
 
 <h3 align="center">Laravel Inertia ReactJs Starter</h3>
@@ -97,12 +91,9 @@
 
 ### Built With
 
-* [Laravel 9](https://laravel.com)
-* [React.js](https://reactjs.org/)
+* [Codeigniter 3](https://codeigniter.com)
 * [Bootstrap 5](https://getbootstrap.com)
-* [Inertia](https://inertiajs.com/)
 * [Argon Dashboard 2](https://www.creative-tim.com/product/argon-dashboard)
-* [Laravel Socialite](https://github.com/laravel/socialite)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
