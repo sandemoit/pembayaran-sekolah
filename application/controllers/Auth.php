@@ -64,6 +64,16 @@ class Auth extends CI_Controller
         }
     }
 
+    public function success()
+    {
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
+
+        $data['title'] = 'Sent Email Verification';
+        $this->load->view('auth/success');
+    }
+
     public function registration()
     {
         if ($this->session->userdata('email')) {
@@ -108,8 +118,8 @@ class Auth extends CI_Controller
 
             $this->_sendEmail($token, 'verify');
 
-            $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Congratulation! your account has been created. Please activate your account</div>');
-            redirect('auth');
+            // $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Congratulation! your account has been created. Please activate your account</div>');
+            redirect('auth/success');
         }
     }
 
@@ -164,7 +174,6 @@ class Auth extends CI_Controller
             </html>
             ');
         }
-        $this->email->subject('Account Verification');
 
         if ($this->email->send()) {
             return true;
