@@ -246,16 +246,16 @@ Project Link: [https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/agungksidik/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
-[contributors-url]: https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/agungksidik/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
-[forks-url]: https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/network/members
-[stars-shield]: https://img.shields.io/github/stars/agungksidik/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
-[stars-url]: https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/stargazers
-[issues-shield]: https://img.shields.io/github/issues/agungksidik/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
-[issues-url]: https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/issues
-[license-shield]: https://img.shields.io/github/license/agungksidik/laravel9-inertiajs-reactjs-starter.svg?style=for-the-badge
-[license-url]: https://github.com/agungksidik/laravel9-inertiajs-reactjs-starter/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/sandemoid/projectsandemo.svg?style=for-the-badge
+[contributors-url]: https://github.com/sandemoid/projectsandemo/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/sandemoid/projectsandemo.svg?style=for-the-badge
+[forks-url]: https://github.com/sandemoid/projectsandemo/network/members
+[stars-shield]: https://img.shields.io/github/stars/sandemoid/projectsandemo.svg?style=for-the-badge
+[stars-url]: https://github.com/sandemoid/projectsandemo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/sandemoid/projectsandemo.svg?style=for-the-badge
+[issues-url]: https://github.com/sandemoid/projectsandemo/issues
+[license-shield]: https://img.shields.io/github/license/sandemoid/projectsandemo.svg?style=for-the-badge
+[license-url]: https://github.com/sandemoid/projectsandemo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/agung-sidik-muhamad-5b427620b/
-[product-screenshot]: https://raw.githubusercontent.com/agungksidik/laravel9-inertiajs-reactjs-starter/master/images/screenshoot1.png
+[product-screenshot]: https://raw.githubusercontent.com/sandemoid/projectsandemo/master/images/screenshoot1.png
