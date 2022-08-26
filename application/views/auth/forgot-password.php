@@ -10,26 +10,18 @@
                     <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
                         <div class="card card-plain">
                             <div class="card-header pb-0 text-start">
-                                <h4 class="font-weight-bolder">Halaman Login</h4>
-                                <p class="mb-0">Masukkan email dan password Anda untuk login</p>
+                                <h4 class="font-weight-bolder">Forgot Password</h4>
+                                <p class="mb-0">Enter your email to send a verification link</p>
                             </div>
                             <div class="card-body">
                                 <?php echo $this->session->flashdata('message') ?>
-                                <form role="form" method="POST" action="<?php echo site_url('auth') ?>">
+                                <form role="form" method="POST" action="<?php echo site_url('auth/forgotpassword') ?>">
                                     <div class="mb-3">
                                         <input type="text" class="form-control form-control-lg" placeholder="Email" id="email" name="email" value="<?= set_value('email') ?>">
                                         <?= form_error('email', '<small class="text-danger" pl-3>', '</small>'); ?>
                                     </div>
-                                    <div class="mb-3">
-                                        <input type="password" class="form-control form-control-lg" placeholder="Password" id="password" name="password">
-                                        <?= form_error('password', '<small class="text-danger" pl-3>', '</small>'); ?>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" id="remember_me" name="remember_me" value="1">
-                                        <label class="form-check-label" for="remember_me">Remember me</label>
-                                    </div>
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Login</button>
+                                        <button type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Send</button>
                                     </div>
                                 </form>
                             </div>
@@ -39,7 +31,7 @@
                                     <a href="<?php echo site_url('auth/registration') ?>" class="text-primary text-gradient font-weight-bold">Register Now!</a>
                                 </p>
                                 <p class="text-sm mx-auto">
-                                    <a href="<?php echo site_url('auth/forgotpassword') ?>" class="text-primary text-gradient font-weight-bold">Forgot Password?</a>
+                                    <a href="<?php echo site_url('auth') ?>" class="text-primary text-gradient font-weight-bold">Login Now!</a>
                                 </p>
                             </div>
                         </div>

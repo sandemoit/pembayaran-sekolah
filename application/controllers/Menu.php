@@ -66,6 +66,22 @@ class Menu extends CI_Controller
         }
     }
 
+    public function edit()
+    {
+        $id = $this->input->post('id');
+        $menu = $this->input->post('menu');
+
+        $data = array(
+            'id' => $id,
+            'menu' => $menu
+        );
+
+        $this->db->where('id', $id);
+        $this->db->update('user_menu', $data);
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert text-center">Success edit menu!</div>');
+        redirect('menu');
+    }
+
     public function subedit()
     {
         $id = $this->input->post('id');
@@ -84,31 +100,15 @@ class Menu extends CI_Controller
 
         $this->db->where('id', $id);
         $this->db->update('user_sub_menu', $data);
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert text-center">Success edit data!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert text-center">Success edit submenu!</div>');
         redirect('menu/submenu');
-    }
-
-    public function edit()
-    {
-        $id = $this->input->post('id');
-        $menu = $this->input->post('menu');
-
-        $data = array(
-            'id' => $id,
-            'menu' => $menu
-        );
-
-        $this->db->where('id', $id);
-        $this->db->update('user_menu', $data);
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert text-center">Success edit menu!</div>');
-        redirect('menu');
     }
 
     public function subdelete($id)
     {
         $where = array('id' => $id);
         $this->Menu_model->delete($where, 'user_sub_menu');
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert text-center">Success delete Menu!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert text-center">Success delete submenu!</div>');
         redirect('menu/submenu');
     }
 }

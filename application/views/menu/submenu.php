@@ -128,7 +128,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="editsmmodal<?= $sm['id'] ?>">Modal title</h5>
+                            <h5 class="modal-title" id="editsmmodal<?= $sm['id'] ?>">Edit Submenu</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -161,7 +161,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn bg-gradient-primary">Save changes</button>
+                                <button type="submit" class="btn bg-gradient-info">Save changes</button>
                             </div>
                         </form>
                     </div>
