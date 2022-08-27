@@ -131,6 +131,7 @@ class Auth extends CI_Controller
             'smtp_user' => EMAIL_ALAMAT,
             'smtp_pass' => EMAIL_PASSWORD,
             'smtp_port' => 587,
+            'smtp_crypto' => 'ssl',
             'mailtype'  => 'html',
             'charset'   => 'utf-8',
             'newline'   => "\r\n"
@@ -143,7 +144,7 @@ class Auth extends CI_Controller
 
         if ($type == 'verify') {
             $this->email->subject('Account Verification');
-            $this->email->message('<html>
+            $this->email->message('
             <head>
                 <title>Account Verification</title>
             </head>
@@ -155,7 +156,6 @@ class Auth extends CI_Controller
                 <p>Please click the link below to activate your account.</p>
                 <h4><a href="' . base_url() . 'auth/verify?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Activate My Account</a></h4>
             </body>
-            </html>
             ');
         } else if ($type == 'forgot') {
             $this->email->subject('Reset Password');
