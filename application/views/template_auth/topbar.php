@@ -31,7 +31,7 @@
                         </a>
                     </li>
                     <li class="nav-item px-3 d-flex align-items-center">
-                        <a href="#" class="nav-link text-white font-weight-bold px-0">
+                        <a href="<?= site_url('user') ?>" class="nav-link text-white font-weight-bold px-0">
                             <img class="avatar avatar-sm rounded-circle me-2" src="<?= base_url('assets/img/profile/') . $user['image']; ?>" alt="">
                             <span class="d-sm-inline d-none"><?= $user['name']; ?></span>
                         </a>

@@ -74,6 +74,7 @@
 <!-- end footer -->
 
 </div>
+</main>
 
 <!--   Core JS Files   -->
 <script src="<?php echo base_url('assets'); ?>/js/core/popper.min.js"></script>

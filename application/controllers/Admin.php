@@ -39,7 +39,7 @@ class Admin extends CI_Controller
             $this->load->view('template_auth/footer');
         } else {
             $this->db->insert('user_role', ['role' => $this->input->post('role')]);
-            $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">New role added!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">New role added!</div>');
             redirect('admin/role');
         }
     }
@@ -79,7 +79,7 @@ class Admin extends CI_Controller
             $this->db->delete('user_access_menu', $data);
         }
 
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Access Changed!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Access Changed!</div>');
     }
 
     public function edit()
@@ -94,7 +94,7 @@ class Admin extends CI_Controller
 
         $this->db->where('id', $id);
         $this->db->update('user_role', $data);
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Success edit data!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Success edit data!</div>');
         redirect('admin/role');
     }
 
@@ -102,7 +102,7 @@ class Admin extends CI_Controller
     {
         $where = array('id' => $id);
         $this->Admin_model->delete($where, 'user_role');
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Success delete role!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Success delete role!</div>');
         redirect('admin/role');
     }
 
@@ -110,7 +110,7 @@ class Admin extends CI_Controller
     {
         $where = array('id' => $id);
         $this->Admin_model->delete($where, 'user');
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white" role="alert">Success delete account!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Success delete account!</div>');
         redirect('admin/user');
     }
 
