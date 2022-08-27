@@ -66,8 +66,8 @@ class Auth extends CI_Controller
 
     public function success()
     {
-        if ($this->session->userdata('email')) {
-            redirect('user');
+        if (!$this->session->userdata('email')) {
+            redirect('auth');
         }
 
         $data['title'] = 'Sent Email Verification';
@@ -142,6 +142,12 @@ class Auth extends CI_Controller
         $this->email->from(EMAIL_HOST, EMAIL_NAMA);
         $this->email->to($this->input->post('email'));
 
+        $data = [
+            'email' => $user_token['email'],
+            'token' => $user_token['token']
+        ];
+        $message = $this->load->view('active-account', $data, true);
+
         if ($type == 'verify') {
             $this->email->subject('Account Verification');
             $this->email->message('
@@ -159,20 +165,7 @@ class Auth extends CI_Controller
             ');
         } else if ($type == 'forgot') {
             $this->email->subject('Reset Password');
-            $this->email->message('<html>
-            <head>
-                <title>Reset Password</title>
-            </head>
-            <body>
-                <h2>Thank you for Registering.</h2>
-                <p>Your Account:</p>
-                <p>Name: ".$name."</p>
-                <p>Email: ".$email."</p>
-                <p>Please click the link below to reset your password.</p>
-                <h4><a href="' . base_url() . 'auth/resetpassword?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Reset My Password</a></h4>
-            </body>
-            </html>
-            ');
+            $this->email->message($message);
         }
 
         if ($this->email->send()) {
