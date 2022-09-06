@@ -1,9 +1,9 @@
-<nav class="main-nav-one main-nav-one__home-three stricky">
+<nav class="main-nav-one stricky">
     <div class="container-fluid">
         <div class="inner-container">
             <div class="logo-box">
                 <a href="./">
-                    <img src="<?= base_url('assets/frontend') ?>/images/logo-1-2.png" alt="">
+                    <img src="<?= base_url('assets/frontend') ?>/images/logo-1-1.png" alt="">
                 </a>
                 <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
             </div><!-- /.logo-box -->
@@ -37,6 +37,11 @@
                     <li>
                         <a href="<?= site_url('') ?>">Blog</a>
                     </li>
+
+                    <li>
+                        <a href="<?= site_url('') ?>">Kontak</a>
+                    </li>
+
                 </ul><!-- /.main-nav__navigation-box -->
             </div><!-- /.main-nav__main-navigation -->
             <div class="main-nav__right">

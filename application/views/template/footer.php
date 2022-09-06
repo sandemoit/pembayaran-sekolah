@@ -1,10 +1,10 @@
 <footer class="site-footer">
     <div class="particles-snow" id="footer-snow"></div><!-- /#footer-snow.particles-snow -->
 
-    <img src="assets/images/shapes/footer-shape-1-1.png" class="site-footer__bg-shape-1" alt="">
-    <img src="assets/images/shapes/footer-shape-1-2.png" class="site-footer__bg-shape-2" alt="">
-    <img src="assets/images/shapes/footer-shape-1-3.png" class="site-footer__bg-shape-3" alt="">
-    <img src="assets/images/shapes/footer-shape-1-4.png" class="site-footer__bg-shape-4" alt="">
+    <img src="<?= base_url('assets/frontend') ?>/images/shapes/footer-shape-1-1.png" class="site-footer__bg-shape-1" alt="">
+    <img src="<?= base_url('assets/frontend') ?>/images/shapes/footer-shape-1-2.png" class="site-footer__bg-shape-2" alt="">
+    <img src="<?= base_url('assets/frontend') ?>/images/shapes/footer-shape-1-3.png" class="site-footer__bg-shape-3" alt="">
+    <img src="<?= base_url('assets/frontend') ?>/images/shapes/footer-shape-1-4.png" class="site-footer__bg-shape-4" alt="">
     <div class="site-footer__upper">
         <div class="container">
             <div class="row">
@@ -60,7 +60,7 @@
     <div class="site-footer__bottom">
         <div class="container">
             <p>© 2020 copyright all right reserved</p>
-            <a href="index.html"><img src="assets/images/logo-1-1.png" alt=""></a>
+            <a href="index.html"><img src="<?= base_url('assets/frontend') ?>/images/logo-1-1.png" alt=""></a>
             <ul class="list-unstyled site-footer__bottom-menu">
                 <li><a href="#">Privace & Policy.</a></li>
                 <li><a href="#">Faq.</a></li>
@@ -88,11 +88,11 @@
     </div><!-- /.side-menu__block-overlay -->
     <div class="side-menu__block-inner ">
 
-        <a href="index.html" class="side-menu__logo"><img src="assets/images/logo-1-1.png" alt=""></a>
+        <a href="index.html" class="side-menu__logo"><img src="<?= base_url('assets/frontend') ?>/images/logo-1-1.png" alt=""></a>
         <nav class="mobile-nav__container">
             <!-- content is loading via js -->
         </nav>
-        <p class="side-menu__block__copy">(c) 2020 <a href="#">Inovex</a> - All rights reserved.</p>
+        <p class="side-menu__block__copy">(c) <?= date('Y') ?> <a href="https://sandemo.id">Sandemo</a> - All rights reserved.</p>
         <div class="side-menu__social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-google-plus"></i></a>
@@ -117,26 +117,26 @@
 </div><!-- /.search-popup -->
 
 <!-- template scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/bootstrap-datepicker.min.js"></script>
-<script src="assets/js/bootstrap-select.min.js"></script>
-<script src="assets/js/isotope.js"></script>
-<script src="assets/js/jquery.ajaxchimp.min.js"></script>
-<script src="assets/js/jquery.circleType.js"></script>
-<script src="assets/js/waypoints.min.js"></script>
-<script src="assets/js/jquery.counterup.min.js"></script>
-<script src="assets/js/jquery.lettering.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="assets/js/jquery.validate.min.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/TweenMax.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/particles.min.js"></script>
-<script src="assets/js/particel-config.js"></script>
-<script src="assets/js/theme.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/jquery.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/bootstrap.bundle.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/bootstrap-datepicker.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/bootstrap-select.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/isotope.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/jquery.ajaxchimp.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/jquery.circleType.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/waypoints.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/jquery.counterup.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/jquery.lettering.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/jquery.magnific-popup.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/jquery.validate.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/owl.carousel.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/TweenMax.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/wow.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/swiper.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/particles.min.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/particel-config.js"></script>
+<script src="<?= base_url('assets/frontend') ?>/js/theme.js"></script>
 </body>
 
 </html>

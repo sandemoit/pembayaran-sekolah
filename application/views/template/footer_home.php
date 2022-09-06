@@ -85,7 +85,7 @@
         <nav class="mobile-nav__container">
             <!-- content is loading via js -->
         </nav>
-        <p class="side-menu__block__copy">(c) 2020 <a href="#">Inovex</a> - All rights reserved.</p>
+        <p class="side-menu__block__copy">(c) <?= date('Y') ?> <a href="https://sandemo.id">Sandemo</a> - All rights reserved.</p>
         <div class="side-menu__social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-google-plus"></i></a>

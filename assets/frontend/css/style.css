@@ -1447,13 +1447,6 @@ a:focus {
 	}
 }
 
-@media(max-width: 1555px) {
-	
-	.main-nav-one__home-three .main-nav__navigation-box>li:nth-child(3)>a {
-		color: #fff;
-	}
-}
-
 .main-nav-one__home-three .logo-box {
 	margin-right: 70px;
 }
