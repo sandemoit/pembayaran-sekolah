@@ -16,6 +16,11 @@ class Admin extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['role'] = $this->db->get('user_role')->row_array();
 
+        $this->db->select_sum('total');
+        $data['total_user'] = $this->db->query('select * from user')->num_rows();
+        $data['total_portfolio'] = $this->db->query('select * from portfolio')->num_rows();
+
+
         $this->load->view('template_auth/header', $data);
         $this->load->view('template_auth/topbar', $data);
         $this->load->view('template_auth/sidebar', $data);
@@ -41,7 +46,7 @@ class Admin extends CI_Controller
         } else {
             $this->db->insert('user_role', ['role' => $this->input->post('role')]);
             $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">New role added!</div>');
-            redirect('admin/role');
+            redirect('admin/admin/role');
         }
     }
 
@@ -96,7 +101,7 @@ class Admin extends CI_Controller
         $this->db->where('id', $id);
         $this->db->update('user_role', $data);
         $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Success edit data!</div>');
-        redirect('admin/role');
+        redirect('admin/admin/role');
     }
 
     public function delete($id)
@@ -104,7 +109,7 @@ class Admin extends CI_Controller
         $where = array('id' => $id);
         $this->Admin_model->delete($where, 'user_role');
         $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Success delete role!</div>');
-        redirect('admin/role');
+        redirect('admin/admin/role');
     }
 
     public function userdelete($id)
@@ -112,7 +117,7 @@ class Admin extends CI_Controller
         $where = array('id' => $id);
         $this->Admin_model->delete($where, 'user');
         $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Success delete account!</div>');
-        redirect('admin/user');
+        redirect('admin/admin/user');
     }
 
     public function user()

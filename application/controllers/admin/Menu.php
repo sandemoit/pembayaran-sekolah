@@ -29,7 +29,7 @@ class Menu extends CI_Controller
         } else {
             $this->db->insert('user_menu', ['menu' => $this->input->post('menu'), 'sort' => $this->input->post('sort')]);
             $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">New menu succes add!</div>');
-            redirect('menu');
+            redirect('admin/menu');
         }
     }
 
@@ -62,7 +62,7 @@ class Menu extends CI_Controller
             ];
             $this->db->insert('user_sub_menu', $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">New sub menu added!</div>');
-            redirect('menu/submenu');
+            redirect('admin/menu/submenu');
         }
     }
 
@@ -79,7 +79,7 @@ class Menu extends CI_Controller
         $this->db->where('id', $id);
         $this->db->update('user_menu', $data);
         $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert text-center">Success edit menu!</div>');
-        redirect('menu');
+        redirect('admin/menu');
     }
 
     public function delete($id)
@@ -87,7 +87,7 @@ class Menu extends CI_Controller
         $where = array('id' => $id);
         $this->Menu_model->delete($where, 'user_menu');
         $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert text-center">Success delete menu!</div>');
-        redirect('menu');
+        redirect('admin/menu');
     }
 
     public function subedit()
@@ -111,7 +111,7 @@ class Menu extends CI_Controller
         $this->db->where('id', $id);
         $this->db->update('user_sub_menu', $data);
         $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert text-center">Success edit submenu!</div>');
-        redirect('menu/submenu');
+        redirect('admin/menu/submenu');
     }
 
     public function subdelete($id)
@@ -119,6 +119,6 @@ class Menu extends CI_Controller
         $where = array('id' => $id);
         $this->Menu_model->delete($where, 'user_sub_menu');
         $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert text-center">Success delete submenu!</div>');
-        redirect('menu/submenu');
+        redirect('admin/menu/submenu');
     }
 }

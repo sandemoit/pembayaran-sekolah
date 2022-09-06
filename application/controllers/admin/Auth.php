@@ -12,7 +12,7 @@ class Auth extends CI_Controller
     public function index()
     {
         if ($this->session->userdata('email')) {
-            redirect('user');
+            redirect('admin/user');
         }
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
@@ -47,28 +47,28 @@ class Auth extends CI_Controller
                     ];
                     $this->session->set_userdata($data);
                     if ($user['role_id'] == 1) {
-                        redirect('admin');
+                        redirect('admin/admin');
                     } else {
-                        redirect('user');
+                        redirect('admin/user');
                     }
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Wrong password!</div>');
-                    redirect('auth');
+                    redirect('admin/auth');
                 }
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">This email has not been activated!</div>');
-                redirect('auth');
+                redirect('admin/auth');
             }
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Email is not register</div>');
-            redirect('auth');
+            redirect('admin/auth');
         }
     }
 
     public function success()
     {
         if (!$this->session->userdata('email')) {
-            redirect('auth');
+            redirect('admin/auth');
         }
 
         $data['title'] = 'Sent Email Verification';
@@ -78,7 +78,7 @@ class Auth extends CI_Controller
     public function registration()
     {
         if ($this->session->userdata('email')) {
-            redirect('user');
+            redirect('admin/user');
         }
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
@@ -121,7 +121,7 @@ class Auth extends CI_Controller
             $this->_sendEmail($token, 'verify');
 
             // $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Congratulation! your account has been created. Please activate your account</div>');
-            redirect('auth/success');
+            redirect('admin/auth/success');
         }
     }
 
@@ -156,7 +156,7 @@ class Auth extends CI_Controller
                 <p>Name: ".$name."</p>
                 <p>Email: ".$email."</p>
                 <p>Please click the link below to activate your account.</p>
-                <h4><a href="' . base_url() . 'auth/verify?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Activate My Account</a></h4>
+                <h4><a href="' . base_url() . 'admin/auth/verify?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Activate My Account</a></h4>
             </body>
             ');
         } else if ($type == 'forgot') {
@@ -191,21 +191,21 @@ class Auth extends CI_Controller
                     $this->db->delete('user_token', ['email' => $email]);
 
                     $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">' . $email . ' has been activated! Please login.</div>');
-                    redirect('auth');
+                    redirect('admin/auth');
                 } else {
                     $this->db->delete('user', ['email' => $email]);
                     $this->db->delete('user_token', ['email' => $email]);
 
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Account activation failed! Token expired.</div>');
-                    redirect('auth');
+                    redirect('admin/auth');
                 }
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Account activation failed! Wrong token.</div>');
-                redirect('auth');
+                redirect('admin/auth');
             }
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Account activation failed! Wrong email.</div>');
-            redirect('auth');
+            redirect('admin/auth');
         }
     }
 
@@ -214,7 +214,7 @@ class Auth extends CI_Controller
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('role_id');
         $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">You have been logout</div>');
-        redirect('auth');
+        redirect('admin/auth');
     }
 
     public function blocked()
@@ -247,10 +247,10 @@ class Auth extends CI_Controller
                 $this->_sendEmail($token, 'forgot');
 
                 $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Please check your email to reset your password!</div>');
-                redirect('auth');
+                redirect('admin/auth');
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Email is not registered or activated!</div>');
-                redirect('auth');
+                redirect('admin/auth');
             }
         }
     }
@@ -258,7 +258,7 @@ class Auth extends CI_Controller
     public function changePassword()
     {
         if (!$this->session->userdata('reset_email')) {
-            redirect('auth');
+            redirect('admin/auth');
         }
 
         $this->form_validation->set_rules('password1', 'Password', 'trim|required|min_length[4]|matches[password2]');
@@ -282,7 +282,7 @@ class Auth extends CI_Controller
             $this->db->delete('user_token', ['email' => $email]);
 
             $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Password has been changed! Please login.</div>');
-            redirect('auth');
+            redirect('admin/auth');
         }
     }
 
@@ -301,11 +301,11 @@ class Auth extends CI_Controller
                 $this->changePassword();
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Reset password failed! Wrong token.</div>');
-                redirect('auth');
+                redirect('admin/auth');
             }
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Reset password failed! Wrong email.</div>');
-            redirect('auth');
+            redirect('admin/auth');
         }
     }
 }

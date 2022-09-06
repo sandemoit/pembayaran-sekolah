@@ -43,7 +43,7 @@
         <div class="tab-content">
             <div class="tab-pane active" id="settings" role="tabpanel">
                 <div class="card-body">
-                    <?php echo form_open_multipart('user'); ?>
+                    <?php echo form_open_multipart('admin/user'); ?>
                     <div class="form-group">
                         <label class="col-md-12">Full Name</label>
                         <div class="col-md-12">
@@ -92,7 +92,7 @@
             </div>
             <div class="tab-pane" id="changepassword" role="tabpanel">
                 <div class="card-body">
-                    <form class="form-horizontal form-material" action="<?= base_url('user/changepassword'); ?>" method="post">
+                    <form class="form-horizontal form-material" action="<?= base_url('admin/user/changepassword'); ?>" method="post">
                         <div class="form-group">
                             <label class="col-md-12">Password</label>
                             <div class="col-md-12">

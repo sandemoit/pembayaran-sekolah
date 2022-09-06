@@ -29,7 +29,7 @@
                             <tr>
                                 <td><?= $i; ?></td>
                                 <td><span class="label label-info"><span><?= $r['role']; ?></span></span>
-                                <td><a href="<?= base_url('admin/roleaccess/') . $r['id']; ?>" class="btn btn-success btn-icon-split">
+                                <td><a href="<?= base_url('admin/admin/roleaccess/') . $r['id']; ?>" class="btn btn-success btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fa fa-gear"></i>
                                         </span>
@@ -69,7 +69,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?php echo base_url('admin/role') ?>" method="POST">
+            <form action="<?php echo base_url('admin/admin/role') ?>" method="POST">
                 <div class="modal-body">
                     <div class="form-group">
                         <input class="form-control" type="text" id="role" name="role" placeholder="Role Name">
@@ -96,7 +96,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php echo base_url('admin/edit') ?>" method="POST">
+                <form action="<?php echo base_url('admin/admin/edit') ?>" method="POST">
                     <div class="modal-body">
                         <div class="form-group">
                             <input class="form-control" type="hidden" id="id" name="id" value="<?= $r['id']; ?>">
@@ -130,7 +130,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn waves-effect waves-light btn-info" data-bs-dismiss="modal">Close</button>
-                    <a class="btn waves-effect waves-light btn-danger" href="<?= base_url('admin/delete/') . $r['id']; ?>">Delete</a>
+                    <a class="btn waves-effect waves-light btn-danger" href="<?= base_url('admin/admin/delete/') . $r['id']; ?>">Delete</a>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
     <div class="login-register" style="background-image:url(<?= base_url('assets') ?>/img/background/login-register.jpg);">
         <div class="login-box card">
             <div class="card-body">
-                <form class="form-horizontal form-material" id="loginform" action="<?php echo site_url('auth/registration') ?>" method="POST">
+                <form class="form-horizontal form-material" id="loginform" action="<?php echo site_url('admin/auth/registration') ?>" method="POST">
                     <h3 class="text-center m-b-20">Sign Up</h3>
                     <div class="form-group">
                         <div class="col-xs-12">
@@ -42,7 +42,7 @@
                     </div>
                     <div class="form-group m-b-0">
                         <div class="col-sm-12 text-center">
-                            Already have an account? <a href="<?= site_url('auth') ?>" class="text-info m-l-5"><b>Sign In</b></a>
+                            Already have an account? <a href="<?= site_url('admin/auth') ?>" class="text-info m-l-5"><b>Sign In</b></a>
                         </div>
                     </div>
                 </form>

@@ -3,7 +3,7 @@
         <div class="login-box card">
             <div class="card-body">
                 <?php echo $this->session->flashdata('message') ?>
-                <form class="form-horizontal form-material" id="loginform" method="POST" action="<?php echo site_url('auth') ?>">
+                <form class="form-horizontal form-material" id="loginform" method="POST" action="<?php echo site_url('admin/auth') ?>">
                     <h3 class="text-center m-b-20">Sign In</h3>
                     <p class="text-muted">Enter your Email and instructions will be sent to you! </p>
                     <div class="form-group ">
@@ -38,11 +38,11 @@
                     </div>
                     <div class="form-group m-b-0">
                         <div class="col-sm-12 text-center">
-                            Don't have an account? <a href="<?php echo site_url('auth/registration') ?>" class="text-info m-l-5"><b>Sign Up</b></a>
+                            Don't have an account? <a href="<?php echo site_url('admin/auth/registration') ?>" class="text-info m-l-5"><b>Sign Up</b></a>
                         </div>
                     </div>
                 </form>
-                <form class="form-horizontal" id="recoverform" method="POST" action="<?php echo site_url('auth/forgotpassword') ?>">
+                <form class="form-horizontal" id="recoverform" method="POST" action="<?php echo site_url('admin/auth/forgotpassword') ?>">
                     <div class="form-group ">
                         <div class="col-xs-12">
                             <h3>Recover Password</h3>

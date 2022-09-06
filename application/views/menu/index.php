@@ -67,7 +67,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?php echo base_url('menu') ?>" method="POST">
+            <form action="<?php echo base_url('admin/menu') ?>" method="POST">
                 <div class="modal-body">
                     <div class="form-group">
                         <input class="form-control" type="text" id="menu" name="menu" placeholder="Menu Name">
@@ -130,7 +130,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn waves-effect waves-light btn-info" data-bs-dismiss="modal">Close</button>
-                    <a class="btn waves-effect waves-light btn-danger" href="<?= base_url('menu/delete/') . $m['id']; ?>">Delete</a>
+                    <a class="btn waves-effect waves-light btn-danger" href="<?= base_url('admin/menu/delete/') . $m['id']; ?>">Delete</a>
                 </div>
             </div>
         </div>

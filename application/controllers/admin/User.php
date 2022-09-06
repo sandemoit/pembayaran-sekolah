@@ -54,7 +54,7 @@ class User extends CI_Controller
             $this->db->where('email', $email);
             $this->db->update('user');
             $this->session->set_flashdata('message', '<span class="text-success">Success edit your profile!</span>');
-            redirect('user');
+            redirect('admin/user');
         }
     }
 
@@ -78,11 +78,11 @@ class User extends CI_Controller
             $new_password = $this->input->post('new_password1');
             if (!password_verify($current_password, $data['user']['password'])) {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong current password!</div>');
-                redirect('user/changepassword');
+                redirect('admin/user/changepassword');
             } else {
                 if ($current_password == $new_password) {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">New password cannot be the same as current password!</div>');
-                    redirect('user/changepassword');
+                    redirect('admin/user/changepassword');
                 } else {
                     // password sudah ok
                     $password_hash = password_hash($new_password, PASSWORD_DEFAULT);
@@ -92,7 +92,7 @@ class User extends CI_Controller
                     $this->db->update('user');
 
                     $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Success change password!</div>');
-                    redirect('user/changepassword');
+                    redirect('admin/user/changepassword');
                 }
             }
         }

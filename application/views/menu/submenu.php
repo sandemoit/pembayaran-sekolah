@@ -85,7 +85,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?php echo base_url('menu/submenu') ?>" method="POST">
+            <form action="<?php echo base_url('admin/menu/submenu') ?>" method="POST">
                 <div class="modal-body">
                     <div class="form-group">
                         <input class="form-control" type="text" id="title" name="title" placeholder="Sub Menu Title">
@@ -131,7 +131,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php echo base_url('menu/subedit') ?>" method="POST">
+                <form action="<?php echo base_url('admin/menu/subedit') ?>" method="POST">
                     <div class="modal-body">
                         <div class="form-group">
                             <input class="form-control" type="hidden" id="id" name="id" value="<?= $sm['id']; ?>">
@@ -183,7 +183,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn waves-effect waves-light btn-info" data-bs-dismiss="modal">Close</button>
-                    <a class="btn waves-effect waves-light btn-danger" href="<?= base_url('menu/subdelete/') . $sm['id']; ?>">Delete</a>
+                    <a class="btn waves-effect waves-light btn-danger" href="<?= base_url('admin/menu/subdelete/') . $sm['id']; ?>">Delete</a>
                 </div>
             </div>
         </div>
