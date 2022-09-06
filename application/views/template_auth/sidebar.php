@@ -1,65 +1,102 @@
-<div class="min-height-300 bg-primary position-absolute w-100"></div>
-<aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 ps ps--active-y" id="sidenav-main">
-    <div class="sidenav-header">
-        <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-        <a class="navbar-brand m-0" href="<?php echo site_url('user') ?>">
-            <img src="<?php echo base_url('assets'); ?>/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
-            <span class="ms-1 font-weight-bold">BLOG <strong>SANDEMO.ID</strong></span>
-        </a>
-    </div>
-    <hr class="horizontal dark mt-0">
+<!-- ============================================================== -->
+<!-- Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<aside class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+        <!-- User Profile-->
+        <div class="user-profile">
+            <div class="user-pro-body">
+                <div>
+                    <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" alt="user-img" class="img-circle">
+                </div>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $user['name']; ?>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="dropdown-menu animated flipInY">
+                        <!-- text-->
+                        <a href="<?= site_url('user') ?>" class="dropdown-item">
+                            <i class="ti-user"></i> My Profile</a>
+                        <!-- text-->
+                        <div class="dropdown-divider"></div>
+                        <!-- text-->
+                        <a href="<?= site_url('auth/logout') ?>" class="dropdown-item">
+                            <i class="ti-power-off"></i> Logout</a>
+                        <!-- text-->
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- QUERY MENU -->
-    <?php
-    $role_id = $this->session->userdata('role_id');
-    $queryMenu = "SELECT `user_menu`.`id`, `menu`
+        <!-- QUERY MENU -->
+        <?php
+        $role_id = $this->session->userdata('role_id');
+        $queryMenu = "SELECT `user_menu`.`id`, `menu`
                 FROM `user_menu` JOIN `user_access_menu`
                 ON `user_menu`.`id` = `user_access_menu`.`menu_id`
                 WHERE `user_access_menu`.`role_id` = $role_id
                 ORDER BY `user_menu`.`sort` ASC ";
-    $menu = $this->db->query($queryMenu)->result_array();
-    ?>
+        $menu = $this->db->query($queryMenu)->result_array();
+        ?>
 
-    <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
-        <ul class="navbar-nav">
-            <!-- looping menu -->
-            <?php foreach ($menu as $m) : ?>
-                <li class="nav-item mt-3">
-                    <h6 class="ps-4  ms-2 text-uppercase text-xs font-weight-bolder opacity-6"><?= $m['menu']; ?></h6>
-                </li>
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <?php foreach ($menu as $m) : ?>
+                    <li class="nav-small-cap">--- <?= $m['menu']; ?></li>
 
-                <!-- SIAPKAN SUB-MENU SESUAI MENU -->
-                <?php
-                $menuId = $m['id'];
-                $querySubMenu = "SELECT *
+
+                    <!-- SIAPKAN SUB-MENU SESUAI MENU -->
+                    <?php
+                    $menuId = $m['id'];
+                    $querySubMenu = "SELECT *
                             FROM `user_sub_menu` JOIN `user_menu` 
                             ON `user_sub_menu`.`menu_id` = `user_menu`.`id`
                             WHERE `user_sub_menu`.`menu_id` = $menuId
                             AND `user_sub_menu`.`is_active` = 1 ";
-                $subMenu = $this->db->query($querySubMenu)->result_array();
-                ?>
-
-                <?php foreach ($subMenu as $sm) : ?>
-                    <li class="nav-item">
+                    $subMenu = $this->db->query($querySubMenu)->result_array();
+                    ?>
+                    <?php foreach ($subMenu as $sm) : ?>
                         <?php if ($title == $sm['title']) : ?>
-                            <a class="nav-link active" href="<?= base_url($sm['url']); ?>">
+                            <li class="active">
                             <?php else : ?>
-                                <a class="nav-link pb-0" href="<?= base_url($sm['url']); ?>">
-                                <?php endif; ?>
-                                <div class="icon icon-shape icon-sm text-center me-2 d-flex align-items-center justify-content-center">
-                                    <i class="ni ni-<?= $sm['icon']; ?> text-sm opacity-10"></i>
-                                </div>
-                                <span class="nav-link-text ms-1"><?= $sm['title']; ?></span>
-                                </a>
-                    </li>
-                <?php endforeach; ?>
-                <hr class="horizontal dark mt-3">
-            <?php endforeach; ?>
-        </ul>
-    </div>
+                            <li>
+                            <?php endif; ?>
+                            <a class="waves-effect waves-dark" href="<?= base_url($sm['url']); ?>">
+                                <i class="<?= $sm['icon']; ?>"></i>
+                                <span class="hide-menu"><?= $sm['title']; ?></span>
+                            </a>
+                            </li>
 
-
-    <div class="sidenav-footer mx-3 my-3">
-        <a href="<?php echo site_url('auth/logout') ?>" class="btn btn-dark btn-sm w-100 mb-3">Logout</a>
+                        <?php endforeach; ?>
+                    <?php endforeach; ?>
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
     </div>
+    <!-- End Sidebar scroll-->
 </aside>
+<!-- ============================================================== -->
+<!-- End Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <h4 class="text-themecolor"><?= $title; ?></h4>
+            </div>
+            <div class="col-md-7 align-self-center text-end">
+                <div class="d-flex justify-content-end align-items-center">
+                    <ol class="breadcrumb justify-content-end">
+                        <li class="breadcrumb-item"><a href="<?= site_url('admin') ?>">Home</a></li>
+                        <li class="breadcrumb-item active"><?= $title; ?></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">

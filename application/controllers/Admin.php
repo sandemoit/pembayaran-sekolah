@@ -17,8 +17,8 @@ class Admin extends CI_Controller
         $data['role'] = $this->db->get('user_role')->row_array();
 
         $this->load->view('template_auth/header', $data);
-        $this->load->view('template_auth/sidebar', $data);
         $this->load->view('template_auth/topbar', $data);
+        $this->load->view('template_auth/sidebar', $data);
         $this->load->view('admin/index', $data);
         $this->load->view('template_auth/footer');
     }
@@ -34,13 +34,13 @@ class Admin extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $this->load->view('template_auth/header', $data);
-            $this->load->view('template_auth/sidebar', $data);
             $this->load->view('template_auth/topbar', $data);
+            $this->load->view('template_auth/sidebar', $data);
             $this->load->view('admin/role', $data);
             $this->load->view('template_auth/footer');
         } else {
             $this->db->insert('user_role', ['role' => $this->input->post('role')]);
-            $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">New role added!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">New role added!</div>');
             redirect('admin/role');
         }
     }
@@ -56,8 +56,8 @@ class Admin extends CI_Controller
         $data['menu'] = $this->db->get('user_menu')->result_array();
 
         $this->load->view('template_auth/header', $data);
-        $this->load->view('template_auth/sidebar', $data);
         $this->load->view('template_auth/topbar', $data);
+        $this->load->view('template_auth/sidebar', $data);
         $this->load->view('admin/role-access', $data);
         $this->load->view('template_auth/footer');
     }
@@ -80,7 +80,7 @@ class Admin extends CI_Controller
             $this->db->delete('user_access_menu', $data);
         }
 
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Access Changed!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Access Changed!</div>');
     }
 
     public function edit()
@@ -95,7 +95,7 @@ class Admin extends CI_Controller
 
         $this->db->where('id', $id);
         $this->db->update('user_role', $data);
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Success edit data!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Success edit data!</div>');
         redirect('admin/role');
     }
 
@@ -103,7 +103,7 @@ class Admin extends CI_Controller
     {
         $where = array('id' => $id);
         $this->Admin_model->delete($where, 'user_role');
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Success delete role!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Success delete role!</div>');
         redirect('admin/role');
     }
 
@@ -111,7 +111,7 @@ class Admin extends CI_Controller
     {
         $where = array('id' => $id);
         $this->Admin_model->delete($where, 'user');
-        $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Success delete account!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Success delete account!</div>');
         redirect('admin/user');
     }
 
@@ -120,11 +120,11 @@ class Admin extends CI_Controller
         $data['title'] = 'User';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-        $data['user'] = $this->Admin_model->get_data();
+        $data['user'] = $this->Admin_model->get_data()->result_array();
 
         $this->load->view('template_auth/header', $data);
-        $this->load->view('template_auth/sidebar', $data);
         $this->load->view('template_auth/topbar', $data);
+        $this->load->view('template_auth/sidebar', $data);
         $this->load->view('admin/user', $data);
         $this->load->view('template_auth/footer');
     }

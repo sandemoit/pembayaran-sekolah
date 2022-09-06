@@ -2,24 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url('assets'); ?>/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="<?php echo base_url('assets'); ?>/img/favicon.png">
-    <title>
-        <?php echo $title; ?>
-    </title>
-    <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-    <!-- Nucleo Icons -->
-    <link href="<?php echo base_url('assets'); ?>/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="<?php echo base_url('assets'); ?>/css/nucleo-svg.css" rel="stylesheet" />
-    <!-- Font Awesome Icons -->
-    <link href="<?php echo base_url('assets'); ?>/css/all.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <link href="<?php echo base_url('assets'); ?>/css/nucleo-svg.css" rel="stylesheet" />
-    <!-- CSS Files -->
-    <link id="pagestyle" href="<?php echo base_url('assets'); ?>/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets'); ?>/img/favicon.png">
+    <title><?= $title; ?></title>
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="<?php echo base_url('assets'); ?>/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="<?php echo base_url('assets'); ?>/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="<?php echo base_url('assets'); ?>/css/style.min.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="<?php echo base_url('assets'); ?>/css/pages/dashboard1.css" rel="stylesheet">
+    <!-- CSS Here -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets'); ?>/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <script src="https://use.fontawesome.com/e6e469eaca.js"></script>
+
+    <!-- <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> -->
 </head>
 
-<body class="g-sidenav-show   bg-gray-100">
+<body class="skin-default-dark fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">SANDEMO</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">

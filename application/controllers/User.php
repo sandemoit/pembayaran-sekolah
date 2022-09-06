@@ -18,13 +18,15 @@ class User extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'My Profile';
             $this->load->view('template_auth/header', $data);
-            $this->load->view('template_auth/sidebar', $data);
             $this->load->view('template_auth/topbar', $data);
+            $this->load->view('template_auth/sidebar', $data);
             $this->load->view('user/index', $data);
             $this->load->view('template_auth/footer');
         } else {
             $name = $this->input->post('name');
             $email = $this->input->post('email');
+            $nohp = $this->input->post('nohp');
+            $maps = $this->input->post('maps');
 
             //cek jika ada gambar di upload
             $upload_image = $_FILES['image']['name'];
@@ -67,8 +69,8 @@ class User extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $this->load->view('template_auth/header', $data);
-            $this->load->view('template_auth/sidebar', $data);
             $this->load->view('template_auth/topbar', $data);
+            $this->load->view('template_auth/sidebar', $data);
             $this->load->view('user/changepassword', $data);
             $this->load->view('template_auth/footer');
         } else {
@@ -79,7 +81,7 @@ class User extends CI_Controller
                 redirect('user/changepassword');
             } else {
                 if ($current_password == $new_password) {
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger text-white text-center" role="alert">New password cannot be the same as current password!</div>');
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">New password cannot be the same as current password!</div>');
                     redirect('user/changepassword');
                 } else {
                     // password sudah ok
@@ -89,7 +91,7 @@ class User extends CI_Controller
                     $this->db->where('email', $this->session->userdata('email'));
                     $this->db->update('user');
 
-                    $this->session->set_flashdata('message', '<div class="alert alert-success text-white text-center" role="alert">Success change password!</div>');
+                    $this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Success change password!</div>');
                     redirect('user/changepassword');
                 }
             }

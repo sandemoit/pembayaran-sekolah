@@ -5,7 +5,7 @@ class Admin_model extends CI_Model
 {
     function get_data()
     {
-        return $this->db->get('user')->result_array();
+        return $this->db->get('user');
     }
 
     function delete($where, $table)
