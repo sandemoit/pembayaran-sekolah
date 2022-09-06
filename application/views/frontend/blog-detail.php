@@ -12,7 +12,7 @@
             <div class="inner-container">
                 <div class="logo-box">
                     <a href="index.html">
-                        <img src="assets/images/logo-1-1.png" alt="">
+                        <img src="<?= base_url('assets/frontend') ?>/images/logo-1-1.png" alt="">
                     </a>
                     <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
                 </div><!-- /.logo-box -->
@@ -94,10 +94,10 @@
     <section class="page-header">
         <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
 
-        <img src="assets/images/shapes/page-header-shape-1-1.png" class="page-header__bg-shape-1" alt="">
-        <img src="assets/images/shapes/page-header-shape-1-2.png" class="page-header__bg-shape-2" alt="">
-        <img src="assets/images/shapes/footer-shape-1-1.png" class="page-header__bg-shape-3" alt="">
-        <img src="assets/images/shapes/footer-shape-1-3.png" class="page-header__bg-shape-4" alt="">
+        <img src="<?= base_url('assets/frontend') ?>/images/shapes/page-header-shape-1-1.png" class="page-header__bg-shape-1" alt="">
+        <img src="<?= base_url('assets/frontend') ?>/images/shapes/page-header-shape-1-2.png" class="page-header__bg-shape-2" alt="">
+        <img src="<?= base_url('assets/frontend') ?>/images/shapes/footer-shape-1-1.png" class="page-header__bg-shape-3" alt="">
+        <img src="<?= base_url('assets/frontend') ?>/images/shapes/footer-shape-1-3.png" class="page-header__bg-shape-4" alt="">
         <div class="container text-center">
             <h2>Blog Details</h2>
             <ul class="list-unstyled thm-breadcrumb">
@@ -108,9 +108,9 @@
     </section><!-- /.page-header -->
 
     <section class="blog-standard blog-details">
-        <img src="assets/images/shapes/bg-shape-1-1.png" class="section__bg-shape-1" alt="">
-        <img src="assets/images/shapes/bg-shape-1-2.png" class="section__bg-shape-2" alt="">
-        <img src="assets/images/shapes/bg-shape-1-3.png" class="section__bg-shape-3" alt="">
+        <img src="<?= base_url('assets/frontend') ?>/images/shapes/bg-shape-1-1.png" class="section__bg-shape-1" alt="">
+        <img src="<?= base_url('assets/frontend') ?>/images/shapes/bg-shape-1-2.png" class="section__bg-shape-2" alt="">
+        <img src="<?= base_url('assets/frontend') ?>/images/shapes/bg-shape-1-3.png" class="section__bg-shape-3" alt="">
 
 
         <div class="section__bubble-1"></div><!-- /.section__bubble-1 -->
@@ -135,7 +135,7 @@
                             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                             ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
-                        <img src="assets/images/blog/blog-2-1.jpg" class="img-fluid" alt="">
+                        <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-2-1.jpg" class="img-fluid" alt="">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                             ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -148,13 +148,13 @@
                             incididunt ut labore et dolore magna aliqua. </p>
                         <div class="row">
                             <div class="col-sm-4">
-                                <img src="assets/images/blog/blog-d-1-1.jpg" alt="" class="img-fluid">
+                                <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-d-1-1.jpg" alt="" class="img-fluid">
                             </div><!-- /.col-md-4 -->
                             <div class="col-sm-4">
-                                <img src="assets/images/blog/blog-d-1-2.jpg" alt="" class="img-fluid">
+                                <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-d-1-2.jpg" alt="" class="img-fluid">
                             </div><!-- /.col-md-4 -->
                             <div class="col-sm-4">
-                                <img src="assets/images/blog/blog-d-1-3.jpg" alt="" class="img-fluid">
+                                <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-d-1-3.jpg" alt="" class="img-fluid">
                             </div><!-- /.col-md-4 -->
                         </div><!-- /.row -->
                         <h4>SEO is a Cost-Effective Advertising Strategy</h4>
@@ -194,7 +194,7 @@
                         <h3 class="comment-one__title">3 Comments</h3>
                         <div class="comment-one__single">
                             <div class="comment-one__image">
-                                <img src="assets/images/blog/comment-1-1.jpg" alt="">
+                                <img src="<?= base_url('assets/frontend') ?>/images/blog/comment-1-1.jpg" alt="">
                             </div><!-- /.comment-one__image -->
                             <div class="comment-one__content">
                                 <h3>Thomas Jamie</h3>
@@ -207,7 +207,7 @@
                         </div><!-- /.comment-one__single -->
                         <div class="comment-one__single">
                             <div class="comment-one__image">
-                                <img src="assets/images/blog/comment-1-2.jpg" alt="">
+                                <img src="<?= base_url('assets/frontend') ?>/images/blog/comment-1-2.jpg" alt="">
                             </div><!-- /.comment-one__image -->
                             <div class="comment-one__content">
                                 <h3>Lydia Sparks</h3>
@@ -220,7 +220,7 @@
                         </div><!-- /.comment-one__single -->
                         <div class="comment-one__single">
                             <div class="comment-one__image">
-                                <img src="assets/images/blog/comment-1-3.jpg" alt="">
+                                <img src="<?= base_url('assets/frontend') ?>/images/blog/comment-1-3.jpg" alt="">
                             </div><!-- /.comment-one__image -->
                             <div class="comment-one__content">
                                 <h3>Owen Thornton</h3>
@@ -235,7 +235,7 @@
                     <div class="contact-two__form-wrap">
                         <h3>Leave a Comment</h3>
 
-                        <form action="assets/inc/sendemail.php" class="contact-one__form">
+                        <form action="<?= base_url('assets/frontend') ?>/inc/sendemail.php" class="contact-one__form">
                             <div class="row">
                                 <div class="col-md-6">
                                     <input type="text" placeholder="Your Name*">
@@ -294,7 +294,7 @@
                             <div class="sidebar__post-wrap">
                                 <div class="sidebar__post-single">
                                     <div class="sidebar__post-image">
-                                        <img src="assets/images/blog/lp-1-1.jpg" alt="">
+                                        <img src="<?= base_url('assets/frontend') ?>/images/blog/lp-1-1.jpg" alt="">
                                     </div><!-- /.sidebar__post-image -->
                                     <div class="sidebar__post-content">
                                         <h3><a href="#">Additional Services that will Grow Your...</a></h3>
@@ -303,7 +303,7 @@
                                 </div><!-- /.sidebar__post-single -->
                                 <div class="sidebar__post-single">
                                     <div class="sidebar__post-image">
-                                        <img src="assets/images/blog/lp-1-2.jpg" alt="">
+                                        <img src="<?= base_url('assets/frontend') ?>/images/blog/lp-1-2.jpg" alt="">
                                     </div><!-- /.sidebar__post-image -->
                                     <div class="sidebar__post-content">
                                         <h3><a href="#">Additional Services that will Grow Your...</a></h3>
@@ -312,7 +312,7 @@
                                 </div><!-- /.sidebar__post-single -->
                                 <div class="sidebar__post-single">
                                     <div class="sidebar__post-image">
-                                        <img src="assets/images/blog/lp-1-3.jpg" alt="">
+                                        <img src="<?= base_url('assets/frontend') ?>/images/blog/lp-1-3.jpg" alt="">
                                     </div><!-- /.sidebar__post-image -->
                                     <div class="sidebar__post-content">
                                         <h3><a href="#">Additional Services that will Grow Your...</a></h3>
@@ -356,11 +356,11 @@
     <section class="mailchimp-one">
         <div class="container">
             <div class="inner-container">
-                <img src="assets/images/mocups/subscribe-moc-1-1.png" class="mailchimp-one__moc-1" alt="">
-                <img src="assets/images/mocups/subscribe-moc-1-2.png" class="mailchimp-one__moc-2" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/mocups/subscribe-moc-1-1.png" class="mailchimp-one__moc-1" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/mocups/subscribe-moc-1-2.png" class="mailchimp-one__moc-2" alt="">
 
-                <img src="assets/images/shapes/subscribe-dot-1-1.png" class="mailchimp-one__bg-shape-1" alt="">
-                <img src="assets/images/shapes/subscribe-shape-1-1.png" class="mailchimp-one__bg-shape-2" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/shapes/subscribe-dot-1-1.png" class="mailchimp-one__bg-shape-1" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/shapes/subscribe-shape-1-1.png" class="mailchimp-one__bg-shape-2" alt="">
                 <div class="block-title text-center">
                     <p><span>Newsletter</span></p>
                     <h3>Signup for Our Latest <br> <span>Update</span></h3>

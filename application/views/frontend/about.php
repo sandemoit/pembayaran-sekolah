@@ -9,7 +9,7 @@
                 <div class="service-one__single">
                     <div class="service-one__icon">
                         <div class="service-one__icon-inner">
-                            <img src="assets/images/shapes/service-i-1.png" alt="">
+                            <img src="<?= base_url('assets/frontend') ?>/images/shapes/service-i-1.png" alt="">
                         </div><!-- /.service-one__icon-inner -->
                     </div><!-- /.service-one__icon -->
                     <div class="service-one__content">
@@ -23,7 +23,7 @@
                 <div class="service-one__single">
                     <div class="service-one__icon">
                         <div class="service-one__icon-inner">
-                            <img src="assets/images/shapes/service-i-2.png" alt="">
+                            <img src="<?= base_url('assets/frontend') ?>/images/shapes/service-i-2.png" alt="">
                         </div><!-- /.service-one__icon-inner -->
                     </div><!-- /.service-one__icon -->
                     <div class="service-one__content">
@@ -37,7 +37,7 @@
                 <div class="service-one__single">
                     <div class="service-one__icon">
                         <div class="service-one__icon-inner">
-                            <img src="assets/images/shapes/service-i-3.png" alt="">
+                            <img src="<?= base_url('assets/frontend') ?>/images/shapes/service-i-3.png" alt="">
                         </div><!-- /.service-one__icon-inner -->
                     </div><!-- /.service-one__icon -->
                     <div class="service-one__content">
@@ -51,7 +51,7 @@
                 <div class="service-one__single">
                     <div class="service-one__icon">
                         <div class="service-one__icon-inner">
-                            <img src="assets/images/shapes/service-i-4.png" alt="">
+                            <img src="<?= base_url('assets/frontend') ?>/images/shapes/service-i-4.png" alt="">
                         </div><!-- /.service-one__icon-inner -->
                     </div><!-- /.service-one__icon -->
                     <div class="service-one__content">
@@ -66,9 +66,9 @@
 </section><!-- /.service-one -->
 
 <section class="about-one">
-    <img src="assets/images/shapes/bg-shape-1-1.png" class="error-404__bg-shape-1" alt="">
-    <img src="assets/images/shapes/bg-shape-1-2.png" class="error-404__bg-shape-2" alt="">
-    <img src="assets/images/shapes/bg-shape-1-3.png" class="error-404__bg-shape-3" alt="">
+    <img src="<?= base_url('assets/frontend') ?>/images/shapes/bg-shape-1-1.png" class="error-404__bg-shape-1" alt="">
+    <img src="<?= base_url('assets/frontend') ?>/images/shapes/bg-shape-1-2.png" class="error-404__bg-shape-2" alt="">
+    <img src="<?= base_url('assets/frontend') ?>/images/shapes/bg-shape-1-3.png" class="error-404__bg-shape-3" alt="">
 
     <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
     <div class="error-404__bubble-2"></div><!-- /.error-404__bubble-2 -->
@@ -125,7 +125,7 @@
             <div class="col-lg-6 d-flex">
                 <div class="my-auto">
                     <div class="about-one__image wow slideInDown" data-wow-duration="1500ms">
-                        <img src="assets/images/mocups/about-1-moc-1.png" alt="">
+                        <img src="<?= base_url('assets/frontend') ?>/images/mocups/about-1-moc-1.png" alt="">
                     </div><!-- /.about-one__image -->
                 </div><!-- /.my-auto -->
             </div><!-- /.col-lg-6 -->
@@ -136,10 +136,10 @@
 <section class="cta-one">
     <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
 
-    <img src="assets/images/shapes/footer-shape-1-1.png" class="cta-one__bg-shape-1" alt="">
-    <img src="assets/images/shapes/footer-shape-1-2.png" class="cta-one__bg-shape-2" alt="">
-    <img src="assets/images/shapes/footer-shape-1-3.png" class="cta-one__bg-shape-3" alt="">
-    <img src="assets/images/shapes/footer-shape-1-4.png" class="cta-one__bg-shape-4" alt="">
+    <img src="<?= base_url('assets/frontend') ?>/images/shapes/footer-shape-1-1.png" class="cta-one__bg-shape-1" alt="">
+    <img src="<?= base_url('assets/frontend') ?>/images/shapes/footer-shape-1-2.png" class="cta-one__bg-shape-2" alt="">
+    <img src="<?= base_url('assets/frontend') ?>/images/shapes/footer-shape-1-3.png" class="cta-one__bg-shape-3" alt="">
+    <img src="<?= base_url('assets/frontend') ?>/images/shapes/footer-shape-1-4.png" class="cta-one__bg-shape-4" alt="">
 
     <div class="container">
         <h3>You Want to Showcase Your Website in <br> <span>Top Join With Us</span></h3>
@@ -158,7 +158,7 @@
             <div class="col-lg-6">
                 <div class="testimonials-one__single">
                     <div class="testimonials-one__icon">
-                        <img src="assets/images/shapes/testi-qoute-1-1.png" alt="">
+                        <img src="<?= base_url('assets/frontend') ?>/images/shapes/testi-qoute-1-1.png" alt="">
                     </div><!-- /.testimonials-one__icon -->
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
@@ -168,7 +168,7 @@
             <div class="col-lg-6">
                 <div class="testimonials-one__single">
                     <div class="testimonials-one__icon">
-                        <img src="assets/images/shapes/testi-qoute-1-1.png" alt="">
+                        <img src="<?= base_url('assets/frontend') ?>/images/shapes/testi-qoute-1-1.png" alt="">
                     </div><!-- /.testimonials-one__icon -->
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
@@ -178,7 +178,7 @@
             <div class="col-lg-6">
                 <div class="testimonials-one__single">
                     <div class="testimonials-one__icon">
-                        <img src="assets/images/shapes/testi-qoute-1-1.png" alt="">
+                        <img src="<?= base_url('assets/frontend') ?>/images/shapes/testi-qoute-1-1.png" alt="">
                     </div><!-- /.testimonials-one__icon -->
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
@@ -188,7 +188,7 @@
             <div class="col-lg-6">
                 <div class="testimonials-one__single">
                     <div class="testimonials-one__icon">
-                        <img src="assets/images/shapes/testi-qoute-1-1.png" alt="">
+                        <img src="<?= base_url('assets/frontend') ?>/images/shapes/testi-qoute-1-1.png" alt="">
                     </div><!-- /.testimonials-one__icon -->
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
@@ -205,70 +205,38 @@
         <div class="brand-one__carousel owl-carousel thm__owl-carousel owl-theme" data-options='{
             "items": 5, "margin": 95, "smartSpeed": 700, "loop": true, "autoplay": true, "autoplayTimeout": 5000, "autoplayHoverPause": false, "nav": false, "dots": false, "responsive": {"0": { "margin": 20, "items": 2 }, "575": { "margin": 30, "items": 3 },"767": { "margin": 40, "items": 4 },   "991": { "margin": 70, "items": 4 }, "1199": { "margin": 95, "items": 5 } } }'>
             <div class="item">
-                <img src="assets/images/brand/brand-1-1.png" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-1.png" alt="">
             </div><!-- /.item -->
             <div class="item">
-                <img src="assets/images/brand/brand-1-2.png" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-2.png" alt="">
             </div><!-- /.item -->
             <div class="item">
-                <img src="assets/images/brand/brand-1-3.png" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-3.png" alt="">
             </div><!-- /.item -->
             <div class="item">
-                <img src="assets/images/brand/brand-1-4.png" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-4.png" alt="">
             </div><!-- /.item -->
             <div class="item">
-                <img src="assets/images/brand/brand-1-5.png" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-5.png" alt="">
             </div><!-- /.item -->
             <div class="item">
-                <img src="assets/images/brand/brand-1-1.png" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-1.png" alt="">
             </div><!-- /.item -->
             <div class="item">
-                <img src="assets/images/brand/brand-1-2.png" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-2.png" alt="">
             </div><!-- /.item -->
             <div class="item">
-                <img src="assets/images/brand/brand-1-3.png" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-3.png" alt="">
             </div><!-- /.item -->
             <div class="item">
-                <img src="assets/images/brand/brand-1-4.png" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-4.png" alt="">
             </div><!-- /.item -->
             <div class="item">
-                <img src="assets/images/brand/brand-1-5.png" alt="">
+                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-5.png" alt="">
             </div><!-- /.item -->
         </div><!-- /.brand-one__carousel owl-carousel thm__owl-carousel owl-theme -->
     </div><!-- /.container -->
 </section><!-- /.brand-one -->
 
 
-<section class="contact-one">
-    <div class="container wow fadeInUp" data-wow-duration="1500ms">
-        <div class="inner-container">
-            <img src="assets/images/shapes/contact-form-shape-1-1.png" class="contact-one__shape-1" alt="">
-            <img src="assets/images/mocups/contact-1-moc-1.png" class="contact-one__shape-2" alt="">
-            <img src="assets/images/mocups/contact-1-moc-2.png" class="contact-one__shape-3" alt="">
-            <div class="block-title text-center">
-                <p><span>Analysis</span></p>
-                <h3>Get Free SEO Analysis?</h3>
-            </div><!-- /.block-title text-center -->
-            <form action="assets/inc/sendemail.php" class="contact-one__form">
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="text" placeholder="Your Name*">
-                    </div><!-- /.col-md-6 -->
-                    <div class="col-md-6">
-                        <input type="text" placeholder="Email*">
-                    </div><!-- /.col-md-6 -->
-                    <div class="col-md-6">
-                        <input type="text" placeholder="Website*">
-                    </div><!-- /.col-md-6 -->
-                    <div class="col-md-6">
-                        <input type="text" placeholder="Subject">
-                    </div><!-- /.col-md-6 -->
-                    <div class="col-md-12 text-center">
-                        <button type="submit" class="thm-btn contact-one__btn">Send Now</button>
-                    </div><!-- /.col-md-12 -->
-                </div><!-- /.row -->
-            </form><!-- /.contact-one__form -->
-
-        </div><!-- /.inner-container -->
-    </div><!-- /.container -->
-</section><!-- /.contact-one -->
+<?php $this->load->view('template/kontak') ?>

@@ -54,7 +54,7 @@
     </div><!-- /.site-footer__upper -->
     <div class="site-footer__bottom">
         <div class="container">
-            <p>© 2020 copyright all right reserved</p>
+            <p>© <?= date('Y') ?> copyright all right reserved</p>
             <a href="index.html"><img src="<?= base_url('assets/frontend') ?>/images/logo-1-1.png" alt=""></a>
             <ul class="list-unstyled site-footer__bottom-menu">
                 <li><a href="#">Privace & Policy.</a></li>

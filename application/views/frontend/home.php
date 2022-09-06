@@ -1,6 +1,5 @@
 <section class="banner-two">
 
-
     <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
     <div class="error-404__bubble-2"></div><!-- /.error-404__bubble-2 -->
     <div class="error-404__bubble-3"></div><!-- /.error-404__bubble-3 -->
@@ -9,7 +8,6 @@
     <div class="error-404__bubble-6"></div><!-- /.error-404__bubble-6 -->
     <div class="error-404__bubble-7"></div><!-- /.error-404__bubble-7 -->
     <div class="error-404__bubble-8"></div><!-- /.error-404__bubble-8 -->
-
 
     <img src="<?= base_url('assets/frontend') ?>/images/shapes/banner-3-shape-1-1.png" class="banner-two__bg-shape-1" alt="">
     <img src="<?= base_url('assets/frontend') ?>/images/shapes/banner-3-shape-1-2.png" class="banner-two__bg-shape-2" alt="">
@@ -23,8 +21,8 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="banner-two__content">
-                    <h3>Boost Your Ranking <br> <span>with SEO Service.</span></h3>
-                    <p>We offer flexible and comprehensive online marketing plans and <br> strategies so you can take advantageour.</p>
+                    <h3>Jasa Pembuatan Website Terbaik</h3>
+                    <p>Bangun bisnis Anda melalui strategi digital marketing bersama kami! Buat jutaan orang di dunia menemukan bisnis Anda.</p>
                     <div class="banner-two__btn-block">
                         <a href="contact.html" class="thm-btn">Join Us Now</a><!-- /.thm-btn -->
                         <a href="contact.html" class="thm-btn">Our Services</a><!-- /.thm-btn -->

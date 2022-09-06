@@ -31,22 +31,18 @@
                     </li>
 
                     <li>
-                        <a href="<?= site_url('') ?>">Portfolio</a>
+                        <a href="<?= site_url('portfolio') ?>">Portfolio</a>
                     </li>
 
                     <li>
-                        <a href="<?= site_url('') ?>">Blog</a>
-                    </li>
-
-                    <li>
-                        <a href="<?= site_url('') ?>">Kontak</a>
+                        <a href="<?= site_url('blog') ?>">Blog</a>
                     </li>
 
                 </ul><!-- /.main-nav__navigation-box -->
             </div><!-- /.main-nav__main-navigation -->
             <div class="main-nav__right">
                 <a href="#" class="search-popup__toggler main-nav__search"><i class="far fa-search"></i></a>
-                <a href="contact.html" class="thm-btn main-nav-one__btn"><span>Contact Us</span></a>
+                <a href="<?= site_url('contact') ?>" class="thm-btn main-nav-one__btn"><span>Contact Us</span></a>
                 <!-- /.thm-btn main-nav-one__btn -->
             </div><!-- /.main-nav__right -->
         </div><!-- /.inner-container -->
