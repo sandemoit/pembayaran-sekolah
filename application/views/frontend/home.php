@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="banner-two__content">
-                    <h1>Jasa Pembuatan Website Terbaik</h1>
+                    <h3>Jasa Pembuatan Website Terbaik</h3>
                     <p>Bangun bisnis Anda melalui strategi digital marketing bersama kami! Buat jutaan orang di dunia menemukan bisnis Anda.</p>
                     <div class="banner-two__btn-block">
                         <a href="<?= base_url('about') ?>" class="thm-btn">Join Us Now</a><!-- /.thm-btn -->
