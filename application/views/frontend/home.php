@@ -21,11 +21,11 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="banner-two__content">
-                    <h3>Jasa Pembuatan Website Terbaik</h3>
+                    <h1>Jasa Pembuatan Website Terbaik</h1>
                     <p>Bangun bisnis Anda melalui strategi digital marketing bersama kami! Buat jutaan orang di dunia menemukan bisnis Anda.</p>
                     <div class="banner-two__btn-block">
-                        <a href="contact.html" class="thm-btn">Join Us Now</a><!-- /.thm-btn -->
-                        <a href="contact.html" class="thm-btn">Our Services</a><!-- /.thm-btn -->
+                        <a href="<?= base_url('about') ?>" class="thm-btn">Join Us Now</a><!-- /.thm-btn -->
+                        <a href="<?= base_url('contact') ?>" class="thm-btn">Our Services</a><!-- /.thm-btn -->
                     </div><!-- /.banner-two__btn-block -->
                 </div><!-- /.banner-two__content -->
             </div><!-- /.col-lg-6 -->
@@ -100,8 +100,8 @@
                                     <!-- /.service-two__box-circle -->
                                     <img src="<?= base_url('assets/frontend') ?>/images/shapes/service-2-i-1.png" alt="">
                                 </div><!-- /.service-two__box-icon -->
-                                <h3><a href="service-d-seo.html">SEO Optimization</a></h3>
-                                <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod tempor.</p>
+                                <h3><a href="service-d-seo.html">Web Maintenance</a></h3>
+                                <p>Siap mengurus website anda dengan baik dan benar.</p>
                             </div><!-- /.service-two__box -->
                             <div class="service-two__box  wow flipInY" data-wow-delay="300ms" data-wow-duration="1500ms">
                                 <div class="service-two__box-icon">
@@ -109,8 +109,8 @@
                                     <!-- /.service-two__box-circle -->
                                     <img src="<?= base_url('assets/frontend') ?>/images/shapes/service-2-i-2.png" alt="">
                                 </div><!-- /.service-two__box-icon -->
-                                <h3><a href="service-d-seo.html">SEO Optimization</a></h3>
-                                <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod tempor.</p>
+                                <h3><a href="service-d-seo.html">Google & Facebook Ads</a></h3>
+                                <p>Dorong bisnis Anda sekarang dengan menggunakan Iklan.</p>
                             </div><!-- /.service-two__box -->
                         </div><!-- /.col-md-6 -->
                         <div class="col-md-6 d-flex">
@@ -121,8 +121,8 @@
                                         <!-- /.service-two__box-circle -->
                                         <img src="<?= base_url('assets/frontend') ?>/images/shapes/service-2-i-3.png" alt="">
                                     </div><!-- /.service-two__box-icon -->
-                                    <h3><a href="service-d-seo.html">SEO Optimization</a></h3>
-                                    <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod tempor.</p>
+                                    <h3><a href="service-d-seo.html">Web Promotion</a></h3>
+                                    <p>Kami siap melakukan promosi usahana Anda.</p>
                                 </div><!-- /.service-two__box -->
                             </div><!-- /.my-auto -->
                         </div><!-- /.col-md-6 d-flex -->
@@ -134,12 +134,9 @@
                     <div class="service-two__main ">
                         <div class="block-title text-left">
                             <p><span>About Company</span></p>
-                            <h3>Boost Your Ranking <br> <span>with SEO Service.</span></h3>
+                            <h3>We develop digital strategies products and services.</span></h3>
                         </div><!-- /.block-title text-center -->
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua.enim ad minim veniam quis nostrud.</p>
-                        <img src="<?= base_url('assets/frontend') ?>/images/shapes/service-sign-1-1.png" alt="">
+                        <p>SANDEMO.ID Digital Marketing yang Mempunyai Pengalaman ledbih dari 3 tahun. Dan sudah membuat puluhan website bisnis dan toko online yang elegant dan professional. Untuk membantu kemajuan bisnis di tahun ini, maka SANDEMO.ID hadir dengan jasa web design yang mengikuti trend website paling update, berbagai interface dan user friendly yang elegant serta mudah untuk dioperasikan oleh user admin.</p>
                     </div><!-- /.service-two__main -->
                 </div><!-- /.my-auto -->
             </div><!-- /.col-lg-6 -->
@@ -166,20 +163,18 @@
             <div class="col-lg-6">
                 <div class="about-one__content">
                     <div class="block-title text-left">
-                        <p class="color-2"><span>Why Choose Us?</span></p>
-                        <h3>There Are Many SEO Sites <br> <span>But Why Choose Us?</span></h3>
+                        <p class="color-2"><span>Advantages of our service?</span></p>
+                        <h3>There Are Many Web Service Sites <br> <span>What will you get?</span></h3>
                     </div><!-- /.block-title text-center -->
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod <br> tempor
-                        incididunt labore.</p>
+                    <p>Benar sekali banyak penyedia layanan jasa pembuatan website, tetapi kami tidak segan segan untuk memberi keuntungan kepada calon pembeli kita.</p>
                     <div class="about-one__box-wrapper">
                         <div class="about-one__box">
                             <div class="about-one__box-icon">
                                 <i class="fa fa-check"></i>
                             </div><!-- /.about-one__box-icon -->
                             <div class="about-one__box-content">
-                                <h3>Best Performence</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br> eiusmod tempor
-                                    incididunt ut labore.</p>
+                                <h3>Gratis Hosting & Domain</h3>
+                                <p>Pembuatan website sudah termasuk domain & hosting, anda hanya perlu menentukan nama domain website sesuai keinginan.</p>
                             </div><!-- /.about-one__box-content -->
                         </div><!-- /.about-one__box -->
                         <div class="about-one__box">
@@ -187,9 +182,8 @@
                                 <i class="fa fa-check"></i>
                             </div><!-- /.about-one__box-icon -->
                             <div class="about-one__box-content">
-                                <h3>Dedicated Team Member</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br> eiusmod tempor
-                                    incididunt ut labore.</p>
+                                <h3>Email Profesional</h3>
+                                <p>Untuk memberikan citra baik terhadap bisnis anda dengan menggunakan nama email yang dapat disesuaikan.</p>
                             </div><!-- /.about-one__box-content -->
                         </div><!-- /.about-one__box -->
                         <div class="about-one__box">
@@ -197,9 +191,8 @@
                                 <i class="fa fa-check"></i>
                             </div><!-- /.about-one__box-icon -->
                             <div class="about-one__box-content">
-                                <h3>24/7 Hours Support</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br> eiusmod tempor
-                                    incididunt ut labore.</p>
+                                <h3>Gratis SSL Certificate</h3>
+                                <p>Website Anda akan mendapatkan SSL (https) untuk meningkatkan keamanan website & kredibilitas website Anda.</p>
                             </div><!-- /.about-one__box-content -->
                         </div><!-- /.about-one__box -->
                     </div><!-- /.about-one__box-wrapper -->
@@ -234,9 +227,9 @@
                         </div><!-- /.service-one__icon-inner -->
                     </div><!-- /.service-one__icon -->
                     <div class="service-one__content">
-                        <h3><a href="service-details.html">Content Marketing</a></h3>
-                        <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                            labore.</p>
+                        <h3><a href="service-details.html">Web Develpment</a></h3>
+                        <p>Web Develpment
+                            Jasa pembuatan website company profile, online shop, personal website, e-commerce, website portal, dll.</p>
                     </div><!-- /.service-one__content -->
                 </div><!-- /.service-one__single -->
             </div><!-- /.col-lg-6 col-md-12 -->
@@ -248,9 +241,8 @@
                         </div><!-- /.service-one__icon-inner -->
                     </div><!-- /.service-one__icon -->
                     <div class="service-one__content">
-                        <h3><a href="service-details.html">Social Marketing</a></h3>
-                        <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                            labore.</p>
+                        <h3><a href="service-details.html">Web Promotion</a></h3>
+                        <p>Bagi anda yang memiliki Usaha tetapi belum mempunyai web, Kami siap melakukan promosi usahana Anda.</p>
                     </div><!-- /.service-one__content -->
                 </div><!-- /.service-one__single -->
             </div><!-- /.col-lg-6 col-md-12 -->
@@ -262,9 +254,8 @@
                         </div><!-- /.service-one__icon-inner -->
                     </div><!-- /.service-one__icon -->
                     <div class="service-one__content">
-                        <h3><a href="service-details.html">SEO Optimization</a></h3>
-                        <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                            labore.</p>
+                        <h3><a href="service-details.html">Web Maintenance</a></h3>
+                        <p>Bagi Anda yang tidak sempat lagi mengurus website, Kami siap melakukan maintenance website.</p>
                     </div><!-- /.service-one__content -->
                 </div><!-- /.service-one__single -->
             </div><!-- /.col-lg-6 col-md-12 -->
@@ -276,9 +267,8 @@
                         </div><!-- /.service-one__icon-inner -->
                     </div><!-- /.service-one__icon -->
                     <div class="service-one__content">
-                        <h3><a href="service-details.html">PPC Advertising</a></h3>
-                        <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                            labore.</p>
+                        <h3><a href="service-details.html">Google & Facebook Ads</a></h3>
+                        <p>Jangan Mau Ketinggalan dari Kompetitor,Dorong bisnis Anda sekarang dengan menggunakan Iklan.</p>
                     </div><!-- /.service-one__content -->
                 </div><!-- /.service-one__single -->
             </div><!-- /.col-lg-6 col-md-12 -->
@@ -290,134 +280,59 @@
 <section class="testimonials-one testimonials-one__about-one testimonials-one__home-three">
     <div class="container">
         <div class="block-title text-left">
-            <p class="color-2"><span>Our Testimonial</span></p>
-            <h3>We Care Client’s Issues <br> <span>So We are Popular.</span></h3>
+            <p class="color-2"><span>Our Portfolio</span></p>
+            <h3>Portfolio.</span></h3>
         </div><!-- /.block-title text-center -->
-        <div class="testimonials-one__carousel thm__owl-carousel owl-carousel owl-theme" data-options='{
-                    "items": 3, "margin": 40, "smartSpeed": 700, "autoplay": true, "autoplayTimeout": 5000,
-                    "autoplayHoverPause": true, "nav": false, "dots": false, "loop": true, "responsive": {
-                        "0": { "items": 1, "margin": 0},
-                        "767": { "items": 1, "margin": 0},
-                        "991": { "items": 2, "margin": 40},
-                        "1199": { "items": 2, "margin": 40},
-                        "1200": { "items": 3, "margin": 40}
-                    }
-                }'>
-            <div class="item">
-                <div class="testimonials-one__single">
-                    <div class="testimonials-one__icon">
-                        <img src="<?= base_url('assets/frontend') ?>/images/shapes/testi-qoute-1-1.png" alt="">
-                    </div><!-- /.testimonials-one__icon -->
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
-                    <h3>Derek Baldwin</h3>
-                </div><!-- /.testimonials-one__single -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="testimonials-one__single">
-                    <div class="testimonials-one__icon">
-                        <img src="<?= base_url('assets/frontend') ?>/images/shapes/testi-qoute-1-1.png" alt="">
-                    </div><!-- /.testimonials-one__icon -->
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
-                    <h3>Charles Morris</h3>
-                </div><!-- /.testimonials-one__single -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="testimonials-one__single">
-                    <div class="testimonials-one__icon">
-                        <img src="<?= base_url('assets/frontend') ?>/images/shapes/testi-qoute-1-1.png" alt="">
-                    </div><!-- /.testimonials-one__icon -->
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
-                    <h3>Eula Rowe</h3>
-                </div><!-- /.testimonials-one__single -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="testimonials-one__single">
-                    <div class="testimonials-one__icon">
-                        <img src="<?= base_url('assets/frontend') ?>/images/shapes/testi-qoute-1-1.png" alt="">
-                    </div><!-- /.testimonials-one__icon -->
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
-                    <h3>Jose Flores</h3>
-                </div><!-- /.testimonials-one__single -->
-            </div><!-- /.item -->
-        </div><!-- /.testimonials-one__carousel -->
+        <ul class="portfolio-filter list-unstyled post-filter ">
+            <li data-filter=".filter-item" class="active"><span>All</span></li>
+            <li data-filter=".strategy"><span>Strategy</span></li>
+            <li data-filter=".optimization"><span>Optimization</span></li>
+            <li data-filter=".advertising"><span>Advertising</span></li>
+            <li data-filter=".social"><span>Social</span></li>
+        </ul><!-- /.portfolio-filter list-unstyled -->
+        <div class="row high-gutters masonary-layout filter-layout">
+            <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  strategy">
+                <div class="portfolio-one__single">
+                    <div class="portfolio-one__image">
+                        <img src="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-1.jpg" alt="">
+                        <a class="img-popup" href="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-1.jpg"><i class="fal fa-plus"></i></a>
+                    </div><!-- /.portfolio-one__image -->
+                    <div class="portfolio-one__content">
+                        <h3><a href="<?= site_url('portfolio/portfoliodetail') ?>">Content Strategy</a></h3>
+                        <p>Customized SEO services</p>
+                    </div><!-- /.portfolio-one__content -->
+                </div><!-- /.portfolio-one__single -->
+            </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item optimization ">
+                <div class="portfolio-one__single">
+                    <div class="portfolio-one__image">
+                        <img src="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-2.jpg" alt="">
+                        <a class="img-popup" href="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-2.jpg"><i class="fal fa-plus"></i></a>
+                    </div><!-- /.portfolio-one__image -->
+                    <div class="portfolio-one__content">
+                        <h3><a href="portfolio-details.html">SEO Optimization</a></h3>
+                        <p>Customized SEO services</p>
+                    </div><!-- /.portfolio-one__content -->
+                </div><!-- /.portfolio-one__single -->
+            </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item advertising">
+                <div class="portfolio-one__single">
+                    <div class="portfolio-one__image">
+                        <img src="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-3.jpg" alt="">
+                        <a class="img-popup" href="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-3.jpg"><i class="fal fa-plus"></i></a>
+                    </div><!-- /.portfolio-one__image -->
+                    <div class="portfolio-one__content">
+                        <h3><a href="portfolio-details.html">Content Marketing</a></h3>
+                        <p>Customized SEO services</p>
+                    </div><!-- /.portfolio-one__content -->
+                </div><!-- /.portfolio-one__single -->
+            </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+        </div><!-- /.row -->
+        <div class="text-center">
+            <a href="#" class="thm-btn portfolio-grid__more-btn"><span>Load More</span></a><!-- /.thm-btn portfolio-grid__more-btn -->
+        </div><!-- /.text-center -->
     </div><!-- /.container -->
 </section><!-- /.testimonials-one -->
-
-<section class="faq-one__form-wrap faq-one__home-three faq-one">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="faq-one__form-image">
-                    <img src="<?= base_url('assets/frontend') ?>/images/mocups/faq-moc-1-1.png" alt="">
-                    <img src="<?= base_url('assets/frontend') ?>/images/mocups/faq-moc-1-2.png" alt="">
-                </div><!-- /.faq-one__form-image -->
-            </div><!-- /.col-lg-6 -->
-            <div class="col-lg-6 d-flex">
-                <div class="my-auto">
-                    <div class="block-title text-left">
-                        <p><span>Our FAQ’S</span></p>
-                        <h3>Freequently Ask <br> <span>Questions.</span></h3>
-                    </div><!-- /.block-title text-center -->
-                    <div class="accrodion-grp" data-grp-name="career-one__accrodion">
-                        <div class="accrodion ">
-                            <div class="accrodion-title">
-                                <h4>Can Users Choose to Install the SEO App?</h4>
-                            </div>
-                            <div class="accrodion-content">
-                                <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit eusmod tempor
-                                        incididunt labore dolore magna aliqua. enim minim veniam quis nostrud.
-                                    </p>
-                                </div><!-- /.inner -->
-                            </div>
-                        </div>
-                        <div class="accrodion active">
-                            <div class="accrodion-title">
-                                <h4>Does Disabling SEO Free Up Space?</h4>
-                            </div>
-                            <div class="accrodion-content">
-                                <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit eusmod tempor
-                                        incididunt labore dolore magna aliqua. enim minim veniam quis nostrud.
-                                    </p>
-                                </div><!-- /.inner -->
-                            </div>
-                        </div>
-                        <div class="accrodion">
-                            <div class="accrodion-title">
-                                <h4>Why are Mobile SEO Apps Important?</h4>
-                            </div>
-                            <div class="accrodion-content">
-                                <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit eusmod tempor
-                                        incididunt labore dolore magna aliqua. enim minim veniam quis nostrud.
-                                    </p>
-                                </div><!-- /.inner -->
-                            </div>
-                        </div>
-                        <div class="accrodion">
-                            <div class="accrodion-title">
-                                <h4>How Does the Moodle SEO Work? </h4>
-                            </div>
-                            <div class="accrodion-content">
-                                <div class="inner">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit eusmod tempor
-                                        incididunt labore dolore magna aliqua. enim minim veniam quis nostrud.
-                                    </p>
-                                </div><!-- /.inner -->
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- /.my-auto -->
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-
-    </div><!-- /.container -->
-</section><!-- /.faq-one__form-wrap -->
 
 <section class="pricing-one pricing-one__home-three">
     <div class="container">
@@ -432,16 +347,24 @@
                     <div class="pricing-one__icon">
                         <img src="<?= base_url('assets/frontend') ?>/images/shapes/pricing-icon-1-1.png" alt="">
                     </div><!-- /.pricing-one__icon -->
-                    <h3>Basic Pack</h3>
+                    <h3>WEBSITE .XYZ
+                        SMART LANDING PAGE
+                        <s>799,240</s>
+                    </h3>
                     <ul class="pricing-one__list list-unstyled">
-                        <li>2gb Hosting</li>
-                        <li>10 Custom Domain</li>
-                        <li>SSD Hosting</li>
-                        <li class="disabled">50 gb Bandwith</li>
-                        <li class="disabled">Free Support</li>
+                        <li><b>3</b> Halaman</li>
+                        <li>Free Domain .xyz</li>
+                        <li>Storage 1 Gb (Kuota 15 Foto)</li>
+                        <li>Free SSL</li>
+                        <li>1x Revisi</li>
+                        <li>Wordpress Premium</li>
+                        <li>Ringan and Responsif</li>
+                        <li>Tayang 24 Jam Tanpa Down</li>
+                        <li class="disabled">Iklan Google Ads (senilai Rp 500,000)</li>
+                        <li class="disabled">1 Email Bisnis (Kuota 750 Mb)</li>
                     </ul><!-- /.pricing-one__list list-unstyled -->
-                    <p>$19.00</p>
-                    <a href="#" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
+                    <p>Rp499,902</p>
+                    <a href="https://wa.link/8kcjuy" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
                 </div><!-- /.pricing-one__single -->
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4 wow fadeInUp" data-wow-duration="1500ms">
@@ -449,16 +372,24 @@
                     <div class="pricing-one__icon">
                         <img src="<?= base_url('assets/frontend') ?>/images/shapes/pricing-icon-1-2.png" alt="">
                     </div><!-- /.pricing-one__icon -->
-                    <h3>Standard Pack</h3>
+                    <h3>WEBSITE .COM
+                        SMART LANDING PAGE
+                        <s>2,124,320</s>
+                    </h3>
                     <ul class="pricing-one__list list-unstyled">
-                        <li>2gb Hosting</li>
-                        <li>10 Custom Domain</li>
-                        <li>SSD Hosting</li>
-                        <li>50 gb Bandwith</li>
-                        <li class="disabled">Free Support</li>
+                        <li><b>3</b> Halaman</li>
+                        <li>Free Domain .com</li>
+                        <li>Storage 1.5 Gb (Kuota 20 Foto)</li>
+                        <li>Free SSL</li>
+                        <li>1x Revisi</li>
+                        <li>Wordpress Premium</li>
+                        <li>Ringan and Responsif</li>
+                        <li>Tayang 24 Jam Tanpa Down</li>
+                        <li class="disabled">Iklan Google Ads (senilai Rp 500,000)</li>
+                        <li class="disabled">1 Email Bisnis (Kuota 750 Mb)</li>
                     </ul><!-- /.pricing-one__list list-unstyled -->
-                    <p>$29.00</p>
-                    <a href="#" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
+                    <p>Rp48,999</p>
+                    <a href="https://wa.link/8kcjuy" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
                 </div><!-- /.pricing-one__single -->
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4 wow fadeInRight" data-wow-duration="1500ms">
@@ -466,16 +397,24 @@
                     <div class="pricing-one__icon">
                         <img src="<?= base_url('assets/frontend') ?>/images/shapes/pricing-icon-1-3.png" alt="">
                     </div><!-- /.pricing-one__icon -->
-                    <h3>Premium Pack</h3>
+                    <h3>PAKET BISNIS
+                        SMART LANDING PAGE + IKLAN GOOGLE
+                        <s>4.081.630</s>
+                    </h3>
                     <ul class="pricing-one__list list-unstyled">
-                        <li>2gb Hosting</li>
-                        <li>10 Custom Domain</li>
-                        <li>SSD Hosting</li>
-                        <li>50 gb Bandwith</li>
-                        <li>Free Support</li>
+                        <li><b>3</b> Halaman</li>
+                        <li>Free Domain .com</li>
+                        <li>Storage 1.5 Gb (Kuota 20 Foto)</li>
+                        <li>Free SSL</li>
+                        <li>1x Revisi</li>
+                        <li>Wordpress Premium</li>
+                        <li>Ringan and Responsif</li>
+                        <li>Tayang 24 Jam Tanpa Down</li>
+                        <li>Iklan Google Ads (senilai Rp 500,000)</li>
+                        <li>1 Email Bisnis (Kuota 750 Mb)</li>
                     </ul><!-- /.pricing-one__list list-unstyled -->
-                    <p>$39.00</p>
-                    <a href="#" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
+                    <p>Rp1,5juta</p>
+                    <a href="https://wa.link/8kcjuy" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
                 </div><!-- /.pricing-one__single -->
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
@@ -561,169 +500,6 @@
                     </div><!-- /.blog-one__content -->
                 </div><!-- /.blog-one__single -->
             </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-one__single">
-                    <div class="blog-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-1-4.jpg" alt="">
-                        <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.blog-one__image -->
-                    <div class="blog-one__content">
-                        <div class="blog-one__meta">
-                            <a href="blog-details.html">Sara dodly</a>
-                            <span>-</span>
-                            <a href="blog-details.html">Mar 15, 2020</a>
-                        </div><!-- /.blog-one__meta -->
-                        <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                        <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                        <!-- /.thm-btn blog-one__btn -->
-                    </div><!-- /.blog-one__content -->
-                </div><!-- /.blog-one__single -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-one__single">
-                    <div class="blog-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-1-5.jpg" alt="">
-                        <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.blog-one__image -->
-                    <div class="blog-one__content">
-                        <div class="blog-one__meta">
-                            <a href="blog-details.html">Sara dodly</a>
-                            <span>-</span>
-                            <a href="blog-details.html">Mar 15, 2020</a>
-                        </div><!-- /.blog-one__meta -->
-                        <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                        <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                        <!-- /.thm-btn blog-one__btn -->
-                    </div><!-- /.blog-one__content -->
-                </div><!-- /.blog-one__single -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-one__single">
-                    <div class="blog-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-1-6.jpg" alt="">
-                        <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.blog-one__image -->
-                    <div class="blog-one__content">
-                        <div class="blog-one__meta">
-                            <a href="blog-details.html">Sara dodly</a>
-                            <span>-</span>
-                            <a href="blog-details.html">Mar 15, 2020</a>
-                        </div><!-- /.blog-one__meta -->
-                        <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                        <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                        <!-- /.thm-btn blog-one__btn -->
-                    </div><!-- /.blog-one__content -->
-                </div><!-- /.blog-one__single -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-one__single">
-                    <div class="blog-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-1-7.jpg" alt="">
-                        <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.blog-one__image -->
-                    <div class="blog-one__content">
-                        <div class="blog-one__meta">
-                            <a href="blog-details.html">Sara dodly</a>
-                            <span>-</span>
-                            <a href="blog-details.html">Mar 15, 2020</a>
-                        </div><!-- /.blog-one__meta -->
-                        <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                        <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                        <!-- /.thm-btn blog-one__btn -->
-                    </div><!-- /.blog-one__content -->
-                </div><!-- /.blog-one__single -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-one__single">
-                    <div class="blog-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-1-8.jpg" alt="">
-                        <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.blog-one__image -->
-                    <div class="blog-one__content">
-                        <div class="blog-one__meta">
-                            <a href="blog-details.html">Sara dodly</a>
-                            <span>-</span>
-                            <a href="blog-details.html">Mar 15, 2020</a>
-                        </div><!-- /.blog-one__meta -->
-                        <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                        <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                        <!-- /.thm-btn blog-one__btn -->
-                    </div><!-- /.blog-one__content -->
-                </div><!-- /.blog-one__single -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-one__single">
-                    <div class="blog-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-1-9.jpg" alt="">
-                        <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.blog-one__image -->
-                    <div class="blog-one__content">
-                        <div class="blog-one__meta">
-                            <a href="blog-details.html">Sara dodly</a>
-                            <span>-</span>
-                            <a href="blog-details.html">Mar 15, 2020</a>
-                        </div><!-- /.blog-one__meta -->
-                        <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                        <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                        <!-- /.thm-btn blog-one__btn -->
-                    </div><!-- /.blog-one__content -->
-                </div><!-- /.blog-one__single -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-one__single">
-                    <div class="blog-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-1-10.jpg" alt="">
-                        <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.blog-one__image -->
-                    <div class="blog-one__content">
-                        <div class="blog-one__meta">
-                            <a href="blog-details.html">Sara dodly</a>
-                            <span>-</span>
-                            <a href="blog-details.html">Mar 15, 2020</a>
-                        </div><!-- /.blog-one__meta -->
-                        <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                        <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                        <!-- /.thm-btn blog-one__btn -->
-                    </div><!-- /.blog-one__content -->
-                </div><!-- /.blog-one__single -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-one__single">
-                    <div class="blog-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-1-11.jpg" alt="">
-                        <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.blog-one__image -->
-                    <div class="blog-one__content">
-                        <div class="blog-one__meta">
-                            <a href="blog-details.html">Sara dodly</a>
-                            <span>-</span>
-                            <a href="blog-details.html">Mar 15, 2020</a>
-                        </div><!-- /.blog-one__meta -->
-                        <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                        <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                        <!-- /.thm-btn blog-one__btn -->
-                    </div><!-- /.blog-one__content -->
-                </div><!-- /.blog-one__single -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-one__single">
-                    <div class="blog-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/blog/blog-1-12.jpg" alt="">
-                        <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.blog-one__image -->
-                    <div class="blog-one__content">
-                        <div class="blog-one__meta">
-                            <a href="blog-details.html">Sara dodly</a>
-                            <span>-</span>
-                            <a href="blog-details.html">Mar 15, 2020</a>
-                        </div><!-- /.blog-one__meta -->
-                        <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                        <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                        <!-- /.thm-btn blog-one__btn -->
-                    </div><!-- /.blog-one__content -->
-                </div><!-- /.blog-one__single -->
-            </div><!-- /.item -->
         </div><!-- /.row -->
-
     </div><!-- /.container -->
 </section><!-- /.blog-grid -->

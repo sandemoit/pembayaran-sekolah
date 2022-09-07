@@ -1424,6 +1424,7 @@ a:focus {
 
 .main-nav-one__home-three .main-nav__navigation-box>li>a {
 	color: #162f62;
+	
 }
 
 @media(max-width: 1915px) {
@@ -1437,6 +1438,7 @@ a:focus {
 	
 	.main-nav-one__home-three .main-nav__navigation-box>li:nth-child(5)>a {
 		color: #fff;
+		padding-left: 20%;
 	}
 }
 
@@ -1444,6 +1446,7 @@ a:focus {
 	
 	.main-nav-one__home-three .main-nav__navigation-box>li:nth-child(4)>a {
 		color: #fff;
+		padding-left: 40%;
 	}
 }
 
@@ -2085,10 +2088,11 @@ a:focus {
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
 }
-.banner-two__content h3 {
+.banner-two__content h1 {
 	margin: 0;
+	margin-right: 10%;
 	color: #162f62;
-	font-size: 50px;
+	font-size: 40px;
 	line-height: 65px;
 	font-weight: bold;
 	margin-bottom: 26px;
@@ -2099,7 +2103,8 @@ a:focus {
 
 .banner-two__content p {
 	margin: 0;
-	color: #8a919e;
+	margin-right: 10%;
+	color: #858b96;
 	font-size: 17px;
 	line-height: 30px;
 	font-weight: 400;
@@ -5325,7 +5330,7 @@ a:focus {
 
 .pricing-one__single h3 {
 	margin: 0;
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: 500;
 	color: var(--thm-black);
 	position: relative;
