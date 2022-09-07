@@ -2088,7 +2088,7 @@ a:focus {
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
 }
-.banner-two__content h1 {
+.banner-two__content h3 {
 	margin: 0;
 	margin-right: 10%;
 	color: #162f62;
@@ -4965,7 +4965,7 @@ a:focus {
 
 
 .team-one {
-	padding-top: 170px;
+	padding-top: 140px;
 	position: relative;
 }
 

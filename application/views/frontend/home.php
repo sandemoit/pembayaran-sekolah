@@ -208,7 +208,7 @@
                     <div class="service-one__content">
                         <h3><a href="service-details.html">Web Develpment</a></h3>
                         <p>Web Develpment
-                            Jasa pembuatan website company profile, online shop, personal website, e-commerce, website portal, dll.</p>
+                            Jasa pembuatan website company profile, online shop, personal website, dll.</p>
                     </div><!-- /.service-one__content -->
                 </div><!-- /.service-one__single -->
             </div><!-- /.col-lg-6 col-md-12 -->
