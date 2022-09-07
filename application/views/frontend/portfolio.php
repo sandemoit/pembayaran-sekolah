@@ -24,66 +24,6 @@
                     </div><!-- /.portfolio-one__content -->
                 </div><!-- /.portfolio-one__single -->
             </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-            <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item optimization ">
-                <div class="portfolio-one__single">
-                    <div class="portfolio-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-2.jpg" alt="">
-                        <a class="img-popup" href="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-2.jpg"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.portfolio-one__image -->
-                    <div class="portfolio-one__content">
-                        <h3><a href="portfolio-details.html">SEO Optimization</a></h3>
-                        <p>Customized SEO services</p>
-                    </div><!-- /.portfolio-one__content -->
-                </div><!-- /.portfolio-one__single -->
-            </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-            <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item advertising">
-                <div class="portfolio-one__single">
-                    <div class="portfolio-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-3.jpg" alt="">
-                        <a class="img-popup" href="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-3.jpg"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.portfolio-one__image -->
-                    <div class="portfolio-one__content">
-                        <h3><a href="portfolio-details.html">Content Marketing</a></h3>
-                        <p>Customized SEO services</p>
-                    </div><!-- /.portfolio-one__content -->
-                </div><!-- /.portfolio-one__single -->
-            </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-            <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item social">
-                <div class="portfolio-one__single">
-                    <div class="portfolio-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-4.jpg" alt="">
-                        <a class="img-popup" href="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-4.jpg"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.portfolio-one__image -->
-                    <div class="portfolio-one__content">
-                        <h3><a href="portfolio-details.html">PPC Advertising</a></h3>
-                        <p>Customized SEO services</p>
-                    </div><!-- /.portfolio-one__content -->
-                </div><!-- /.portfolio-one__single -->
-            </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-            <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item social">
-                <div class="portfolio-one__single">
-                    <div class="portfolio-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-5.jpg" alt="">
-                        <a class="img-popup" href="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-5.jpg"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.portfolio-one__image -->
-                    <div class="portfolio-one__content">
-                        <h3><a href="portfolio-details.html">Social Marketing</a></h3>
-                        <p>Customized SEO services</p>
-                    </div><!-- /.portfolio-one__content -->
-                </div><!-- /.portfolio-one__single -->
-            </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-            <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item advertising">
-                <div class="portfolio-one__single">
-                    <div class="portfolio-one__image">
-                        <img src="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-6.jpg" alt="">
-                        <a class="img-popup" href="<?= base_url('assets/frontend') ?>/images/portfolio/portfolio-1-6.jpg"><i class="fal fa-plus"></i></a>
-                    </div><!-- /.portfolio-one__image -->
-                    <div class="portfolio-one__content">
-                        <h3><a href="portfolio-details.html">SEM Strategy</a></h3>
-                        <p>Customized SEO services</p>
-                    </div><!-- /.portfolio-one__content -->
-                </div><!-- /.portfolio-one__single -->
-            </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
         </div><!-- /.row -->
         <div class="text-center">
             <a href="#" class="thm-btn portfolio-grid__more-btn"><span>Load More</span></a><!-- /.thm-btn portfolio-grid__more-btn -->

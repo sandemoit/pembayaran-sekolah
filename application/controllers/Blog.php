@@ -12,4 +12,14 @@ class Blog extends CI_Controller
         $this->load->view('frontend/blog');
         $this->load->view('template/footer');
     }
+
+    public function blogdetail()
+    {
+        $data['title'] = 'Judul';
+        $this->load->view('template/header', $data);
+        $this->load->view('template/navbar');
+        $this->load->view('template/page_header');
+        $this->load->view('frontend/blog-detail');
+        $this->load->view('template/footer');
+    }
 }

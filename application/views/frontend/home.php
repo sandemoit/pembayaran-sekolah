@@ -51,27 +51,6 @@
             <div class="item">
                 <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-3.png" alt="">
             </div><!-- /.item -->
-            <div class="item">
-                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-4.png" alt="">
-            </div><!-- /.item -->
-            <div class="item">
-                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-5.png" alt="">
-            </div><!-- /.item -->
-            <div class="item">
-                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-1.png" alt="">
-            </div><!-- /.item -->
-            <div class="item">
-                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-2.png" alt="">
-            </div><!-- /.item -->
-            <div class="item">
-                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-3.png" alt="">
-            </div><!-- /.item -->
-            <div class="item">
-                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-4.png" alt="">
-            </div><!-- /.item -->
-            <div class="item">
-                <img src="<?= base_url('assets/frontend') ?>/images/brand/brand-1-5.png" alt="">
-            </div><!-- /.item -->
         </div><!-- /.brand-one__carousel owl-carousel thm__owl-carousel owl-theme -->
     </div><!-- /.container -->
 </section><!-- /.brand-one -->

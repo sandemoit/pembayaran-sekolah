@@ -11,8 +11,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="footer-widget footer-widget__about">
                         <h3 class="footer-widget__title">About</h3>
-                        <p>We focus on the needs of small to middle market businesses to improve and grow their
-                            return.</p>
+                        <p>Sandemo.id merupakan penyedia layanan digital merketing dan web design di Palembang, Indonesia.</p>
                         <div class="footer-widget__social">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -22,35 +21,32 @@
                     </div><!-- /.footer-widget footer-widget__about -->
                 </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
                 <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="footer-widget footer-widget__links__1">
-                        <h3 class="footer-widget__title">Services</h3>
+                    <div class="footer-widget footer-widget__contact">
+                        <h3 class="footer-widget__title">Contact</h3>
                         <ul class="list-unstyled footer-widget__links-list">
-                            <li><a href="#">Web Design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Wordpress</a></li>
-                            <li><a href="#">Online Marketing</a></li>
-                            <li><a href="#">Content</a></li>
+                            <li><a href="#">Jl. Zainal Abidin Labuhan ratu Gg. Harapan 1 No. 18 Bandar Lampung</a></li>
+                            <li><a href="#">083160901108</a></li>
+                            <li><a href="#">swidodo.com@gmail.com</a></li>
+                            <li><a href="#">Jam Kerja: 09.00 - 17.00 WIB</a></li>
                         </ul><!-- /.list-unstyled footer-widget__links-list -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="footer-widget footer-widget__links__2">
-                        <h3 class="footer-widget__title">Quick Links</h3>
+                        <h3 class="footer-widget__title">E-Commerce</h3>
                         <ul class="list-unstyled footer-widget__links-list">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Work Portfolio</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Price Plan</a></li>
-                            <li><a href="#">Latest News</a></li>
+                            <li><a href="#">Facebook Page</a></li>
+                            <li><a href="#">Shopee</a></li>
+                            <li><a href="#">Toko Pedia</a></li>
                         </ul><!-- /.list-unstyled footer-widget__links-list -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
                 <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="footer-widget footer-widget__contact">
-                        <h3 class="footer-widget__title">Contact</h3>
-                        <p>Royal Orville Road Apt. 728 <br> California, USA</p>
-                        <p><a href="mailto:inovex.inc@company.com">inovex.inc@company.com</a></p>
-                        <p><a href="tel:720.661.2231">720.661.2231</a></p>
+                    <div class="footer-widget footer-widget__links__1">
+                        <h3 class="footer-widget__title">Services</h3>
+                        <ul class="list-unstyled footer-widget__links-list">
+                            <p>Untuk request penawaran sebaiknya via email. Kami hanya bisa dihubungi pada hari dan jam kerja, diluar itu silahkan melalui email.</p>
+                        </ul><!-- /.list-unstyled footer-widget__links-list -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
             </div><!-- /.row -->
