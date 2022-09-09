@@ -33,6 +33,7 @@
     </div>
 </div>
 <div class="col-lg-8 col-xlg-9 col-md-7">
+    <?= $this->session->flashdata('message'); ?>
     <div class="card">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs profile-tab" role="tablist">
@@ -43,13 +44,12 @@
         <div class="tab-content">
             <div class="tab-pane active" id="settings" role="tabpanel">
                 <div class="card-body">
-                    <?php echo form_open_multipart('admin/user'); ?>
+                    <?php echo form_open_multipart('user'); ?>
                     <div class="form-group">
                         <label class="col-md-12">Full Name</label>
                         <div class="col-md-12">
                             <input class="form-control" name="name" id="name" type="text" value="<?= $user['name']; ?>">
                             <?= form_error('name', '<small class="text-danger" pl-3>', '</small>'); ?>
-                            <?= $this->session->flashdata('message'); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -63,7 +63,6 @@
                         <div class="col-md-12">
                             <input class="form-control" name="nohp" id="nohp" type="number" value="<?= $user['nohp']; ?>">
                             <?= form_error('nohp', '<small class="text-danger" pl-3>', '</small>'); ?>
-                            <?= $this->session->flashdata('message'); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -71,7 +70,6 @@
                         <div class="col-md-12">
                             <input class="form-control" name="maps" id="maps" type="text" value="<?= $user['maps']; ?>">
                             <?= form_error('maps', '<small class="text-danger" pl-3>', '</small>'); ?>
-                            <?= $this->session->flashdata('message'); ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -92,7 +90,7 @@
             </div>
             <div class="tab-pane" id="changepassword" role="tabpanel">
                 <div class="card-body">
-                    <form class="form-horizontal form-material" action="<?= base_url('admin/user/changepassword'); ?>" method="post">
+                    <form class="form-horizontal form-material" action="<?= base_url('user/changepassword'); ?>" method="post">
                         <div class="form-group">
                             <label class="col-md-12">Password</label>
                             <div class="col-md-12">

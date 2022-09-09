@@ -16,12 +16,12 @@
                     </a>
                     <div class="dropdown-menu animated flipInY">
                         <!-- text-->
-                        <a href="<?= site_url('admin/user') ?>" class="dropdown-item">
+                        <a href="<?= site_url('user') ?>" class="dropdown-item">
                             <i class="ti-user"></i> My Profile</a>
                         <!-- text-->
                         <div class="dropdown-divider"></div>
                         <!-- text-->
-                        <a href="<?= site_url('admin/auth/logout') ?>" class="dropdown-item">
+                        <a href="<?= site_url('auth/logout') ?>" class="dropdown-item">
                             <i class="ti-power-off"></i> Logout</a>
                         <!-- text-->
                     </div>
@@ -92,7 +92,7 @@
             <div class="col-md-7 align-self-center text-end">
                 <div class="d-flex justify-content-end align-items-center">
                     <ol class="breadcrumb justify-content-end">
-                        <li class="breadcrumb-item"><a href="<?= site_url('admin/admin') ?>">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<?= site_url('admin') ?>">Home</a></li>
                         <li class="breadcrumb-item active"><?= $title; ?></li>
                     </ol>
                 </div>

@@ -20,6 +20,8 @@
     <link href="<?php echo base_url('assets'); ?>/css/style.min.css" rel="stylesheet">
     <!-- Dashboard 1 Page CSS -->
     <link href="<?php echo base_url('assets'); ?>/css/pages/dashboard1.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets'); ?>/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets'); ?>/node_modules/datatables.net-bs4/css/responsive.dataTables.min.css">
     <!-- CSS Here -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets'); ?>/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
     <script src="https://use.fontawesome.com/e6e469eaca.js"></script>
@@ -28,7 +30,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> -->
 </head>
 
-<body class="skin-default-dark fixed-layout">
+<body class="skin-green fixed-layout">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->

@@ -3,7 +3,7 @@
         <div class="login-box card">
             <div class="card-body">
                 <?php echo $this->session->flashdata('message') ?>
-                <form class="form-horizontal form-material" id="loginform" action="<?php echo site_url('admin/auth/changepassword') ?>">
+                <form class="form-horizontal form-material" id="loginform" action="<?php echo site_url('auth/changepassword') ?>">
                     <h3 class="box-title m-b-20">Recover Password</h3>
                     <div class="form-group ">
                         <div class="col-xs-12">

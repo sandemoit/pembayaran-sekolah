@@ -57,7 +57,7 @@
 </div>
 <!-- /.container-fluid -->
 
-<!-- Modal -->
+<!-- Modal Add -->
 <div class="modal fade" id="newmenumodal" tabindex="-1" role="dialog" aria-labelledby="newmenumodal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -67,7 +67,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?php echo base_url('admin/menu') ?>" method="POST">
+            <form action="<?php echo base_url('menu') ?>" method="POST">
                 <div class="modal-body">
                     <div class="form-group">
                         <input class="form-control" type="text" id="menu" name="menu" placeholder="Menu Name">
@@ -96,7 +96,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php echo base_url('menu/edit') ?>" method="POST">
+                <form action="<?php echo base_url('edit') ?>" method="POST">
                     <div class="modal-body">
                         <div class="form-group">
                             <input class="form-control" type="hidden" id="id" name="id" value="<?= $m['id']; ?>">
@@ -130,7 +130,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn waves-effect waves-light btn-info" data-bs-dismiss="modal">Close</button>
-                    <a class="btn waves-effect waves-light btn-danger" href="<?= base_url('admin/menu/delete/') . $m['id']; ?>">Delete</a>
+                    <a class="btn waves-effect waves-light btn-danger" href="<?= base_url('menu/delete/') . $m['id']; ?>">Delete</a>
                 </div>
             </div>
         </div>
