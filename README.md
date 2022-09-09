@@ -1,1 +1,1 @@
-SEMANGAT
+email : sandimaulidika password : admin
