@@ -54,11 +54,11 @@
                     <div class="col-md-6 mb-3">
                         <label for="jenis_kelamin">Jenis Kelamin</label>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="jenis_kelamin" id="jenis_kelamin" value="Laki-laki">
+                            <input type="radio" class="form-check-input" name="jenis_kelamin" id="jenis_kelamin" value="Laki-laki">
                             <label class="form-check-label" for="customCheck1">Laki - laki</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="jenis_kelamin" id="jenis_kelamin" value="Perempuan">
+                            <input type="radio" class="form-check-input" name="jenis_kelamin" id="jenis_kelamin" value="Perempuan">
                             <label class="form-check-label" for="customCheck1">Perempuan</label>
                         </div>
                         <?= form_error('jenis_kelamin', '<small class="text-danger pl-3">', '</small>'); ?>

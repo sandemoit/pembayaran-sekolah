@@ -22,6 +22,7 @@
     <link href="<?php echo base_url('assets'); ?>/css/pages/dashboard1.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets'); ?>/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets'); ?>/node_modules/datatables.net-bs4/css/responsive.dataTables.min.css">
+    <link href="<?php echo base_url('assets'); ?>/node_modules/tablesaw/dist/tablesaw.css" rel="stylesheet">
     <!-- CSS Here -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets'); ?>/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
     <script src="https://use.fontawesome.com/e6e469eaca.js"></script>

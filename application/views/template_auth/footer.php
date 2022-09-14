@@ -51,6 +51,8 @@
 <!-- Javascript datatable -->
 <script src="<?php echo base_url('assets'); ?>/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url('assets'); ?>/node_modules/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+<script src="<?php echo base_url('assets'); ?>/node_modules/tablesaw/dist/tablesaw.jquery.js"></script>
+<script src="<?php echo base_url('assets'); ?>/node_modules/tablesaw/dist/tablesaw-init.js"></script>
 
 <script src="<?php echo base_url('assets'); ?>/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url('assets'); ?>/node_modules/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
@@ -78,14 +80,14 @@
         const roleId = $(this).data('role');
 
         $.ajax({
-            url: "<?= base_url('admin/admin/changeaccess'); ?>",
+            url: "<?= base_url('admin/changeaccess'); ?>",
             type: 'post',
             data: {
                 menuId: menuId,
                 roleId: roleId
             },
             success: function() {
-                document.location.href = "<?= base_url('admin/admin/roleaccess/'); ?>" + roleId;
+                document.location.href = "<?= base_url('admin/roleaccess/'); ?>" + roleId;
             }
         });
 
