@@ -84,7 +84,6 @@ class Siswas_model extends CI_Model
         redirect('siswa/tambahsiswa');
     }
 
-
     public function tambahTransaksi()
     {
 
@@ -107,7 +106,6 @@ class Siswas_model extends CI_Model
                 $status = '<span class="label label-danger">Belum Lunas</span>';
             }
         }
-
 
         $data = [
             'id_siswa'          => $this->input->post('id', true),
@@ -188,5 +186,15 @@ class Siswas_model extends CI_Model
                 ');
             redirect('siswa/transaksi');
         }
+    }
+
+    public function invoice()
+    {
+        $query = "SELECT *
+                    FROM `data_siswa` JOIN `transaksi`
+                    ON `data_siswa`.`id` = `transaksi`.`id_siswa`
+                    WHERE `transaksi`.`id` = " . $this->uri->segment(3);
+
+        return $this->db->query($query)->result_array();
     }
 }

@@ -54,12 +54,21 @@
                                     ?>
                                 </td>
                                 <td class="text-center">
+                                    <!-- detail transaksi -->
                                     <a href="#" class="btn btn-info btn-icon-split" data-bs-toggle="modal" data-bs-target="#detail<?= $t['id'] ?>">
                                         <span class="icon text-white-50">
                                             <i class="ti-book"></i>
                                         </span>
                                         <span class="text">Detail Transaksi</span>
                                     </a>
+                                    <!-- cetak invoice -->
+                                    <a href="<?= site_url('siswa/invoice/') . $t['id'] ?>" class="btn btn-success btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="ti-printer"></i>
+                                        </span>
+                                        <span class="text">Invoice</span>
+                                    </a>
+                                    <!-- delete -->
                                     <a href="#" class="btn btn-danger btn-icon-split" data-bs-toggle="modal" data-bs-target="#hapusmodal<?= $t['id'] ?>">
                                         <span class="icon text-white-50">
                                             <i class="ti-trash"></i>

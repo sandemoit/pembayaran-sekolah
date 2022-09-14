@@ -20,7 +20,22 @@
         // ============================================================== 
         $('#to-recover').on("click", function() {
             $("#loginform").slideUp();
-            $("#recoverform").fadeIn();
+            $("#recoverform").slideDown();
+        });
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            $(".preloader").fadeOut();
+        });
+        $(function() {
+            $('[data-bs-toggle="tooltip"]').tooltip()
+        });
+        // ============================================================== 
+        // Login and Recover Password 
+        // ============================================================== 
+        $('#to-login').on("click", function() {
+            $("#recoverform").slideUp();
+            $("#loginform").slideDown();
         });
     </script>
 

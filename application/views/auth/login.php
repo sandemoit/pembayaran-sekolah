@@ -5,7 +5,7 @@
                 <?php echo $this->session->flashdata('message') ?>
                 <form class="form-horizontal form-material" id="loginform" method="POST" action="<?php echo site_url('auth') ?>">
                     <h3 class="text-center m-b-20">Sign In</h3>
-                    <p class="mb-1 text-center"><em class="text-primary">Sistem Informasi Pembayaran SPP Online</em></p>
+                    <p class="mb-3 text-center"><em class="text-primary">Sistem Informasi Pembayaran SPP Online</em></p>
                     <div class="form-group ">
                         <div class="col-xs-12">
                             <input type="text" class="form-control form-control-lg" placeholder="Email" id="email" name="email" value="<?= set_value('email') ?>">
@@ -57,7 +57,12 @@
                     </div>
                     <div class="form-group text-center m-t-20">
                         <div class="col-xs-12">
-                            <button class="btn btn-primary btn-lg w-100 text-uppercase waves-effect waves-light" type="submit">Reset</button>
+                            <button class="btn btn-danger btn-lg w-100 text-uppercase waves-effect waves-light" type="submit">Reset</button>
+                        </div>
+                    </div>
+                    <div class="form-group m-b-0">
+                        <div class="col-sm-12 text-center">
+                            <a href="javascript:void(0)" id="to-login" class="text-info m-l-5"><b>Back Login</b></a>
                         </div>
                     </div>
                 </form>

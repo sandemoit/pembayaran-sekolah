@@ -26,6 +26,7 @@
     <!-- CSS Here -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets'); ?>/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
     <script src="https://use.fontawesome.com/e6e469eaca.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url('assets'); ?>/css/all.css">
 
     <!-- <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> -->

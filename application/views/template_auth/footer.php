@@ -66,6 +66,23 @@
 <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
 <!-- end - This is for export functionality only -->
 
+<!-- print -->
+<script src="<?php echo base_url('assets'); ?>/js/custom.min.js"></script>
+<script src="<?php echo base_url('assets'); ?>/js/pages/jquery.PrintArea.js" type="text/JavaScript"></script>
+<script>
+    $(document).ready(function() {
+        $("#print").click(function() {
+            var mode = 'iframe'; //popup
+            var close = mode == "popup";
+            var options = {
+                mode: mode,
+                popClose: close
+            };
+            $("div.printableArea").printArea(options);
+        });
+    });
+</script>
+
 
 <script>
     $('.custom-file-input').on('change', function() {

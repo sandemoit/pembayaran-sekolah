@@ -46,10 +46,11 @@ class Siswa extends CI_Controller
             'integer'  => 'NIK hanya berupa bilangan bulat',
             'is_unique' => 'NIK sudah terdaftar'
         ]);
-        $this->form_validation->set_rules('nok', 'NO KK', 'required|trim|numeric|integer', [
+        $this->form_validation->set_rules('nok', 'NO KK', 'required|trim|numeric|integer|is_unique', [
             'required' => 'No KK tidak Boleh Kosong!',
             'integer' => 'No KK hanya berupa bilangan bulat!',
-            'numeric'  => 'No KK harus berupa angka!'
+            'numeric'  => 'No KK harus berupa angka!',
+            'is_unique' => 'No KK sudah terdaftar'
         ]);
         $this->form_validation->set_rules('nama_siswa', 'Nama Siswa', 'required|trim', [
             'required' => 'Nama siswa tidak boleh kosong'
@@ -144,5 +145,17 @@ class Siswa extends CI_Controller
             ');
             redirect('siswa');
         }
+    }
+
+    public function invoice()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['title'] = 'Cetak Invocie';
+        $data['invoice'] = $this->Siswas_model->invoice();
+        $this->load->view('template_auth/header', $data);
+        $this->load->view('template_auth/topbar', $data);
+        $this->load->view('template_auth/sidebar', $data);
+        $this->load->view('siswa/invoice', $data);
+        $this->load->view('template_auth/footer', $data);
     }
 }
