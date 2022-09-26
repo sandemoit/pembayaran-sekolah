@@ -116,50 +116,58 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" action="<?= base_url('siswa/editsiswa'); ?>">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="nik">Nomor Induk Kependudakan (NIK)</label>
-                            <input type="text" class="form-control" id="nik" name="nik" value="<?= $s['nik']; ?>" maxlength="16" readonly>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="nik">Nomor Induk Kependudakan (NIK)</label>
+                                    <input type="text" class="form-control" id="nik" name="nik" value="<?= $s['nik']; ?>" maxlength="16" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nok">Nomor KK (NOK)</label>
+                                    <input type="text" class="form-control" id="nok" name="nok" maxlength="16" value="<?= $s['nok']; ?>">
+                                    <?= form_error('nok', '<small class="text-danger pl-3">', '</small>'); ?>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nama_siswa">Nama Siswa</label>
+                                    <input type="text" class="form-control" id="nama_siswa" name="nama_siswa" value="<?= $s['nama_siswa']; ?>">
+                                    <?= form_error('nama_siswa', '<small class="text-danger pl-3">', '</small>'); ?>
+                                </div>
+                                <div class="form-group">
+                                    <label for="jenis_kelamin">Jenis Kelamin</label>
+                                    <select class="form-control" id="jenis_kelamin" name="jenis_kelamin" type="text">
+                                        <option value="<?= $s['jenis_kelamin']; ?>" selected><?= $s['jenis_kelamin']; ?></option>
+                                        <option value="Laki-laki">Laki-laki</option>
+                                        <option value="Perempuan">Perempuan</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="nok">Nomor KK (NOK)</label>
-                            <input type="text" class="form-control" id="nok" name="nok" maxlength="16" value="<?= $s['nok']; ?>">
-                            <?= form_error('nok', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
-                        <div class="form-group">
-                            <label for="nama_siswa">Nama Siswa</label>
-                            <input type="text" class="form-control" id="nama_siswa" name="nama_siswa" value="<?= $s['nama_siswa']; ?>">
-                            <?= form_error('nama_siswa', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
-                        <div class="form-group">
-                            <label for="jenis_kelamin">Jenis Kelamin</label>
-                            <select class="form-control" id="jenis_kelamin" name="jenis_kelamin" type="text">
-                                <option value="<?= $s['jenis_kelamin']; ?>" selected><?= $s['jenis_kelamin']; ?></option>
-                                <option value="Laki-laki">Laki-laki</option>
-                                <option value="Perempuan">Perempuan</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="kelas_id">Kelas</label>
-                            <select class="form-control" id="kelas_id" name="kelas_id" type="text">
-                                <option value="<?= $s['kelas_id']; ?>"><?= $s['nama_kelas']; ?></option>
-                                <?php foreach ($kelas as $k) : ?>
-                                    <option value="<?= $k['id']; ?>"><?= $k['nama_kelas']; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="nama_ayah">Nama Ayah</label>
-                            <input type="text" class="form-control" id="nama_ayah" name="nama_ayah" value="<?= $s['nama_ayah']; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="nama_ibu">Nama Ibu</label>
-                            <input type="text" class="form-control" id="nama_ibu" name="nama_ibu" value="<?= $s['nama_ibu']; ?>">
-                            <?= form_error('nama_ibu', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
-                        <div class="form-group">
-                            <label for="alamat_ortu">Alamat Lengkap Orang Tua</label>
-                            <textarea class="form-control" id="alamat_ortu" name="alamat_ortu" rows="3"><?= $s['alamat_ortu']; ?></textarea>
+                        <div class="col-6">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="kelas_id">Kelas</label>
+                                    <select class="form-control" id="kelas_id" name="kelas_id" type="text">
+                                        <option value="<?= $s['kelas_id']; ?>"><?= $s['nama_kelas']; ?></option>
+                                        <?php foreach ($kelas as $k) : ?>
+                                            <option value="<?= $k['id']; ?>"><?= $k['nama_kelas']; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nama_ayah">Nama Ayah</label>
+                                    <input type="text" class="form-control" id="nama_ayah" name="nama_ayah" value="<?= $s['nama_ayah']; ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nama_ibu">Nama Ibu</label>
+                                    <input type="text" class="form-control" id="nama_ibu" name="nama_ibu" value="<?= $s['nama_ibu']; ?>">
+                                    <?= form_error('nama_ibu', '<small class="text-danger pl-3">', '</small>'); ?>
+                                </div>
+                                <div class="form-group">
+                                    <label for="alamat_ortu">Alamat Lengkap Orang Tua</label>
+                                    <textarea class="form-control" id="alamat_ortu" name="alamat_ortu" rows="3"><?= $s['alamat_ortu']; ?></textarea>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">

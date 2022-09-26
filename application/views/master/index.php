@@ -23,23 +23,23 @@
                 <table id="myTable" class="table table-striped border">
                     <thead>
                         <tr>
-                            <th>Jumlah Lunas Bayar</th>
                             <th>Pembayaran Bulanan</th>
                             <th>Tahun</th>
+                            <th>Jumlah Lunas Bayar</th>
                             <th widht>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($iuran as $i) : ?>
                             <tr>
+                                <td><?= $i['bulan_bayar']; ?></td>
+                                <td><?= $i['tahun']; ?></td>
                                 <td>
                                     <?php $angka = $i['jmlh_bayar_lunas'];
                                     $rupiah = "Rp " . number_format($angka, 2, ',', '.');
                                     echo $rupiah;
                                     ?>
                                 </td>
-                                <td><?= $i['bulan_bayar']; ?></td>
-                                <td><?= $i['tahun']; ?></td>
                                 <td>
                                     <a href="#" class="btn btn-warning btn-icon-split" data-bs-toggle="modal" data-bs-target="#editmmodal<?= $i['id'] ?>">
                                         <span class="icon text-white-50">
@@ -87,10 +87,10 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" id="jmlh_bayar_lunas" name="jmlh_bayar_lunas" placeholder="Jumlah Bayar Lunas (Rp)">
+                        <input class="form-control" type="number" id="tahun" name="tahun" maxlength="4" placeholder="Tahun">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="number" id="tahun" name="tahun" maxlength="4" placeholder="Tahun">
+                        <input class="form-control" type="text" id="jmlh_bayar_lunas" name="jmlh_bayar_lunas" placeholder="Jumlah Bayar Lunas (Rp)">
                     </div>
                 </div>
                 <div class="modal-footer">
