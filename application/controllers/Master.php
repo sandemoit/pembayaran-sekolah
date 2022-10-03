@@ -8,6 +8,7 @@ class Master extends CI_Controller
         parent::__construct();
         is_logged_in();
         $this->load->model('Masters_model');
+        $this->load->model('Laporan_model');
     }
 
     public function index()
@@ -147,5 +148,23 @@ class Master extends CI_Controller
         } else {
             $this->Masters_model->editKurikulum($id);
         }
+    }
+
+    public function laporan()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['laporan']    = $this->Laporan_model->getLaporan();
+        $data['title'] = 'Laporan';
+        $data['sum'] = $this->Laporan_model->getSum();
+
+        $this->load->library('pdfgenerator');
+        $file_pdf = 'laporan_data';
+        $paper = 'A4';
+        $orientation = "potrait";
+
+        $html = $this->load->view('master/laporan', $data, true);
+
+        // run dompdf
+        $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
     }
 }

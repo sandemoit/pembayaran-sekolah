@@ -158,4 +158,22 @@ class Siswa extends CI_Controller
         $this->load->view('siswa/invoice', $data);
         $this->load->view('template_auth/footer', $data);
     }
+
+    public function laporan()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['laporan']    = $this->Laporan_model->getLaporan();
+        $data['title'] = "LAPORAN";
+        $data['sum'] = $this->Laporan_model->getSum();
+        $this->load->library('pdfgenerator');
+
+        $file_pdf = 'laporan_data';
+        $paper = 'A4';
+        $orientation = "landscape";
+
+        $html = $this->load->view('laporan', $data, true);
+
+        // run dompdf
+        $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
+    }
 }
