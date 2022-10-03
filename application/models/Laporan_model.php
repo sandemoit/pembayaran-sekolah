@@ -6,8 +6,8 @@ class Laporan_model extends CI_Model
     public function getLaporan()
     {
         $query = "SELECT *
-                    FROM `data_siswa` JOIN `transaksi`
-                    ON `data_siswa`.`id` = `transaksi`.`id_siswa`
+                    FROM `data_siswa` JOIN `transaksi` JOIN `kelas`
+                    ON `data_siswa`.`id` = `transaksi`.`id_siswa` AND `kelas`.`id` = `transaksi`.`id_kelas`
         ";
 
         return $this->db->query($query)->result_array();

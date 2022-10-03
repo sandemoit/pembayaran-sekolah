@@ -9,9 +9,10 @@
 </head>
 <style>
     #table {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
         border-collapse: collapse;
         width: 100%;
+        font-size: 12px;
     }
 
     #table td,
@@ -38,8 +39,9 @@
 </style>
 
 <body>
-    <div style="text-align: center;">
-        <h1>Laporan Data Siswa</h1>
+    <img src="<?php echo base_url('assets'); ?>/img/sma.png" style="position: absolute; width: 60px; height: auto;">
+    <div style="text-align: center; line-height: 1.6;">
+        <h1>LAPORAN DATA SISWA</h1>
         <h3>SMK Negeri 1 Cimahi</h3>
         <h4>Jl. Raya Cimahi No. 1, Cimahi, Kabupaten Bandung Barat, Jawa Barat 40512</h4>
     </div>
@@ -48,6 +50,7 @@
             <tr>
                 <th>No</th>
                 <th>Nama</th>
+                <th>Kelas</th>
                 <th>Bulan</th>
                 <th>Jumlah Bayar</th>
                 <th>Tanggal Bayar</th>
@@ -59,6 +62,7 @@
                 <tr>
                     <td><?= $i; ?></td>
                     <td><?= $l['nama_siswa']; ?></td>
+                    <td><?= $l['nama_kelas']; ?></td>
                     <td><?= $l['bulan_bayar']; ?></td>
                     <td>
                         <?php $laporan = $l['jmlh_bayar'];
@@ -73,7 +77,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="3" align="center"><b>Total</b></td>
+                <td colspan="4" align="center"><b>Total</b></td>
                 <td colspan="1"><b>Rp. <?= $l['jmlh_bayar']; ?></b></td>
                 <td colspan="3"></td>
             </tr>

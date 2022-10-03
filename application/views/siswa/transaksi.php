@@ -98,6 +98,8 @@
                     <div class="modal-body">
                         <h4>Nama Siswa :</h4>
                         <p class="text-danger"><b><?= $t['nama_siswa']; ?></b></p>
+                        <h4>Kelas :</h4>
+                        <p class="text-danger"><b><?= $t['nama_kelas']; ?></b></p>
                         <h4>Jumlah Bayar :</h4>
                         <p class="text-danger"><b>
                                 <?php $angka = $t['jmlh_bayar'];
