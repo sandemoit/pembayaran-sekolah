@@ -134,7 +134,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="text-danger">Menghapus Data id : <b><?= $t['id'] ?></b></p>
+                    <p class="text-danger">Menghapus Data : <b><?= $t['nama_siswa'] ?></b></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn waves-effect waves-light btn-info" data-bs-dismiss="modal">Close</button>
