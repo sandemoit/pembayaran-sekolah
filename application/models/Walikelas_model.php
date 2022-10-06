@@ -6,8 +6,8 @@ class Walikelas_model extends CI_Model
     public function getAllWalikelas()
     {
         $query = "SELECT *
-                    FROM `kelas` JOIN `walikelas`
-                    ON `kelas`.`id` = `walikelas`.`id_nama_kelas`
+                    FROM `kelas` JOIN `walikelas` JOIN `user`
+                    ON `kelas`.`id` = `walikelas`.`id_nama_kelas` AND `walikelas`.`email` = `user`.`email`
         ";
 
         return $this->db->query($query)->result_array();
@@ -32,10 +32,12 @@ class Walikelas_model extends CI_Model
     public function tambahWalikelas()
     {
         $name = $this->input->post('name', true);
+        $nip = $this->input->post('nip', true);
         $email = $this->input->post('email', true);
 
         $data1 = [
             'name' => $name,
+            'nip' => $nip,
             'email' => $email,
             'id_nama_kelas' => $this->input->post('id_nama_kelas')
         ];
@@ -44,7 +46,7 @@ class Walikelas_model extends CI_Model
             'name' => $name,
             'email' => $email,
             'image' => 'default.jpg',
-            'password' => password_hash('admin', PASSWORD_DEFAULT),
+            'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
             'role_id' => 3,
             'is_active' => 1,
             'date_created' => time()
@@ -52,5 +54,13 @@ class Walikelas_model extends CI_Model
 
         $this->db->insert('walikelas', $data1);
         $this->db->insert('user', $data2);
+    }
+
+    public function insert($data)
+    {
+        $insert = $this->db->insert_batch('walikelas', $data);
+        if ($insert) {
+            return true;
+        }
     }
 }

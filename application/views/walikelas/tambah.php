@@ -6,14 +6,24 @@
             <div class="col-sm-12 col-xs-12">
                 <form action="tambahwalikelas" method="POST">
                     <div class="form-group">
-                        <label for="exampleInputEmail111" class="form-label">User Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Username" value="<?= set_value('name') ?>">
+                        <label for="exampleInputEmail111" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Nama" value="<?= set_value('name') ?>">
                         <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail12" class="form-label">Email address</label>
+                        <label class="form-label">Email address</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" value="<?= set_value('email') ?>">
                         <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">NIP</label>
+                        <input type="nip" class="form-control" id="nip" name="nip" placeholder="Enter NIP" value="<?= set_value('nip') ?>">
+                        <?= form_error('nip', '<small class="text-danger pl-3">', '</small>'); ?>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" value="<?= set_value('password') ?>">
+                        <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail111" class="form-label">Kelas Binaan</label>

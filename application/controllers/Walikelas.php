@@ -65,6 +65,15 @@ class Walikelas extends CI_Controller
             'required' => 'kelas binaan harus di pilih',
             'is_unique' => 'kelas binaan ini sudah ada walikelasnya!'
         ]);
+        $this->form_validation->set_rules('nip', 'NIP', 'trim|required|is_unique[walikelas.nip]|min_lenght[7]', [
+            'required' => 'NIP tidak boleh kosong',
+            'is_unique' => 'NIP ini sudah ada walikelasnya!',
+            'min_lenght' => 'NIP tidak valid'
+        ]);
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|min_lenght[4]', [
+            'required' => 'Password tidak boleh kosong',
+            'min_lenght' => 'Password terlalu pendek, MIN 4 karakter'
+        ]);
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('template_auth/header', $data);
@@ -80,6 +89,39 @@ class Walikelas extends CI_Controller
             Selamat! data walikelas berhasil ditambahkan...</div>
             ');
             redirect('walikelas');
+        }
+    }
+
+    public function import_excel()
+    {
+        if (isset($_FILES["fileExcel"]["name"])) {
+            $path = $_FILES["fileExcel"]["tmp_name"];
+            $object = PHPExcel_IOFactory::load($path);
+            foreach ($object->getWorksheetIterator() as $worksheet) {
+                $highestRow = $worksheet->getHighestRow();
+                $highestColumn = $worksheet->getHighestColumn();
+                for ($row = 2; $row <= $highestRow; $row++) {
+                    $name = $worksheet->getCellByColumnAndRow(1, $row)->getValue();
+                    $nip = $worksheet->getCellByColumnAndRow(2, $row)->getValue();
+                    $email = $worksheet->getCellByColumnAndRow(3, $row)->getValue();
+                    $temp_data[] = array(
+                        'name'    => $name,
+                        'nip'    => $nip,
+                        'email'    => $email
+                    );
+                }
+            }
+            $this->load->model('Walikelas_model');
+            $insert = $this->Walikelas_model->insert($temp_data);
+            if ($insert) {
+                $this->session->set_flashdata('message', '<span class="glyphicon glyphicon-ok"></span> Data Berhasil di Import ke Database');
+                redirect($_SERVER['HTTP_REFERER']);
+            } else {
+                $this->session->set_flashdata('message', '<span class="glyphicon glyphicon-remove"></span> Terjadi Kesalahan');
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+        } else {
+            echo "Tidak ada file yang masuk";
         }
     }
 }
