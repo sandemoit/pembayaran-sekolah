@@ -15,10 +15,9 @@ class Laporan_model extends CI_Model
 
     public function getSUm()
     {
-        $query = "SELECT SUM(`transaksi`.`jmlh_bayar`) AS `total`
+        $query = "SELECT SUM(`jmlh_bayar`) AS `total`
                     FROM `transaksi`
         ";
-
-        return $this->db->query($query)->row_array();
+        return $this->db->query($query)->row();
     }
 }

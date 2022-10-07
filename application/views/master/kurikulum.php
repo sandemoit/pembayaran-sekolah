@@ -64,7 +64,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="newkelas">Add New Kelas</h5>
+                <h5 class="modal-title" id="newkelas">Add New Kurikulum</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="<?php echo base_url('master/kurikulum') ?>" method="POST">
@@ -122,7 +122,6 @@
                         </div>
                         <div class="form-group">
                             <select class="form-control" name="semester" id="semester" type="text">
-                                <option value="<?= $k['semester'] ?>"><?= $k['semester'] ?></option>
                                 <option value="Ganjil">Ganjil</option>
                                 <option value="Genap">Genap</option>
                             </select>

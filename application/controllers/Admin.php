@@ -17,10 +17,11 @@ class Admin extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['role'] = $this->db->get('user_role')->row_array();
 
+        // Total
         $data['total_user'] = $this->db->query('select * from data_siswa')->num_rows();
         $data['total_siswa'] = $this->db->query('select * from user')->num_rows();
         $data['total_walikelas'] = $this->db->query('select * from walikelas')->num_rows();
-        $data['total_bayar'] = $this->db->query("SELECT sum(jmlh_bayar) as jmlh_bayar FROM transaksi")->row_array();
+        $data['total_bayar'] = $this->Admin_model->getSum()->row()->total;
 
         $this->load->view('template_auth/header', $data);
         $this->load->view('template_auth/topbar', $data);

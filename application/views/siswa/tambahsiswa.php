@@ -7,35 +7,35 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control" id="nik" name="nik" placeholder="Enter Name here">
+                            <input type="number" class="form-control" id="nik" name="nik" value="<?= set_value('nik') ?>" placeholder="Enter Name here">
                             <label for="tb-fname">Nomor Induk Kependudakan (NIK)</label>
                             <?= form_error('nik', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control" id="nok" name="nok" placeholder="Enter Name here">
+                            <input type="number" class="form-control" id="nok" name="nok" value="<?= set_value('nok') ?>" placeholder="Enter Name here">
                             <label for="tb-email">Nomor KK (NOK)</label>
                             <?= form_error('nok', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="tb-fname" id="nama_siswa" name="nama_siswa" placeholder="Enter Name here">
+                            <input type="text" class="form-control" id="tb-fname" id="nama_siswa" name="nama_siswa" value="<?= set_value('nama_siswa') ?>" placeholder="Enter Name here">
                             <label for="tb-fname">Nama Siswa</label>
                             <?= form_error('nama_siswa', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="nama_ayah" name="nama_ayah" placeholder="Enter Name here">
+                            <input type="text" class="form-control" id="nama_ayah" name="nama_ayah" value="<?= set_value('nama_ayah') ?>" placeholder="Enter Name here">
                             <label for="tb-email">Nama Ayah</label>
                             <?= form_error('nama_ayah', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="nama_ibu" name="nama_ibu" placeholder="Enter Name here">
+                            <input type="text" class="form-control" id="nama_ibu" name="nama_ibu" value="<?= set_value('nama_ibu') ?>" placeholder="Enter Name here">
                             <label for="tb-email">Nama Ibu</label>
                             <?= form_error('nama_ibu', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-floating">
-                            <textarea class="form-control" id="alamat_ortu" name="alamat_ortu" rows="3" placeholder="Enter Name here"></textarea>
+                            <textarea class="form-control" id="alamat_ortu" name="alamat_ortu" rows="3" value="<?= set_value('alamat_ortu') ?>" placeholder="Enter Name here"></textarea>
                             <label for="tb-email">Alamat</label>
                             <?= form_error('alamat_ortu', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>

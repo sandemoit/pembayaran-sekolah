@@ -46,7 +46,7 @@ class Siswa extends CI_Controller
             'integer'  => 'NIK hanya berupa bilangan bulat',
             'is_unique' => 'NIK sudah terdaftar'
         ]);
-        $this->form_validation->set_rules('nok', 'NO KK', 'required|trim|numeric|integer|is_unique', [
+        $this->form_validation->set_rules('nok', 'NO KK', 'required|trim|numeric|integer|is_unique[data_siswa.nok]', [
             'required' => 'No KK tidak Boleh Kosong!',
             'integer' => 'No KK hanya berupa bilangan bulat!',
             'numeric'  => 'No KK harus berupa angka!',

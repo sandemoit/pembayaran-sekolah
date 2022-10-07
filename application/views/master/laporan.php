@@ -68,7 +68,7 @@
     <tfoot>
         <tr>
             <td colspan="4" align="center"><b>Total</b></td>
-            <td colspan="1"><b>Rp. <?= $l['jmlh_bayar']; ?></b></td>
+            <td colspan="1"><b>Rp. <?= number_format($sum, 0, ',', '.') ?></b></td>
             <td colspan="3"></td>
         </tr>
     </tfoot>

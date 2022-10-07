@@ -12,4 +12,9 @@ class Admin_model extends CI_Model
     {
         $this->db->delete($table, $where);
     }
+
+    function getSum()
+    {
+        return $this->db->query("SELECT SUM(jmlh_bayar) as total FROM transaksi");
+    }
 }

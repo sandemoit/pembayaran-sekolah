@@ -1,9 +1,3 @@
-<!-- ============================================================== -->
-<!-- End Bread crumb and right sidebar toggle -->
-<!-- ============================================================== -->
-<!-- ============================================================== -->
-<!-- Info box -->
-<!-- ============================================================== -->
 <div class="row g-0">
     <div class="col-lg-3 col-md-6">
         <div class="card border">
@@ -72,10 +66,10 @@
                         <div class="d-flex no-block align-items-center">
                             <div>
                                 <h3><i class="icons-Money-2"></i></h3>
-                                <p class="text-muted">TOTAL SISWAW BAYAR</p>
+                                <p class="text-muted">TOTAL BAYAR</p>
                             </div>
                             <div class="ms-auto">
-                                <h2 class="counter text-cyan">Rp </h2>
+                                <h2 class="counter text-cyan">Rp. <?= number_format($total_bayar, 0, ',', '.') ?></h2>
                             </div>
                         </div>
                     </div>

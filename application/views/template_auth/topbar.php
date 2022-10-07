@@ -33,35 +33,15 @@
             <!-- ============================================================== -->
             <ul class="navbar-nav me-auto">
                 <!-- This is  -->
-                <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
-                <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
-            </ul>
-
-            <ul class="navbar-nav my-lg-0">
-                <!-- ============================================================== -->
-                <!-- Comment -->
-                <!-- ============================================================== -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-sign-out-alt"></i>
+                <li class="nav-item">
+                    <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)">
+                        <i class="ti-menu"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-end mailbox animated bounceInDown">
-                        <ul>
-                            <li>
-                                <div class="message-center">
-                                    <!-- text-->
-                                    <a href="<?= site_url('user') ?>" class="dropdown-item">
-                                        <i class="ti-user"></i> My Profile</a>
-                                    <!-- text-->
-                                    <div class="dropdown-divider"></div>
-                                    <!-- text-->
-                                    <a href="<?= site_url('auth/logout') ?>" class="dropdown-item">
-                                        <i class="ti-power-off"></i> Logout</a>
-                                    <!-- text-->
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)">
+                        <i class="icon-menu"></i>
+                    </a>
                 </li>
             </ul>
         </div>
