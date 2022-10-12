@@ -11,8 +11,7 @@
 <!-- footer -->
 <!-- ============================================================== -->
 <footer class="footer">
-    © <?= date('Y') ?> RAJIN-<em>Bayar</em> by sandemo.id
-    <a href="https://www.sandemo.id/">Sandemo</a>
+    © <?= date('Y') ?> RAJIN-<em>Bayar</em> by <a href="https://www.sandemo.id/">sandemo.id</a>
 </footer>
 <!-- ============================================================== -->
 <!-- End footer -->
