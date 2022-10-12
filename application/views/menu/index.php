@@ -99,8 +99,13 @@
                 <form action="<?php echo base_url('edit') ?>" method="POST">
                     <div class="modal-body">
                         <div class="form-group">
+                            <label for="">Nama Menu</label>
                             <input class="form-control" type="hidden" id="id" name="id" value="<?= $m['id']; ?>">
                             <input class="form-control" type="text" id="menu" name="menu" value="<?= $m['menu']; ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Urutan</label>
+                            <input class="form-control" type="text" id="sort" name="sort" value="<?= $m['sort']; ?>">
                         </div>
                     </div>
                     <div class="modal-footer">

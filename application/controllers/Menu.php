@@ -70,10 +70,12 @@ class Menu extends CI_Controller
     {
         $id = $this->input->post('id');
         $menu = $this->input->post('menu');
+        $sort = $this->input->post('sort');
 
         $data = array(
             'id' => $id,
-            'menu' => $menu
+            'menu' => $menu,
+            'sort' => $sort
         );
 
         $this->db->where('id', $id);
