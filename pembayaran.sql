@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.1deb5ubuntu1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 09, 2022 at 10:57 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.27
+-- Host: localhost:3306
+-- Generation Time: Oct 12, 2022 at 01:57 PM
+-- Server version: 10.6.7-MariaDB-2ubuntu1.1
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `iuran`
+-- Database: `pembayaran`
 --
 
 -- --------------------------------------------------------
@@ -67,7 +67,7 @@ CREATE TABLE `iuran` (
 INSERT INTO `iuran` (`id`, `bulan_bayar`, `jmlh_bayar_lunas`, `tahun`) VALUES
 (1, 'Januari', 600000, 2024),
 (2, 'Februari', 600000, 2022),
-(3, 'Maret', 60000, 2020);
+(3, 'Maret', 600000, 2020);
 
 -- --------------------------------------------------------
 
@@ -122,6 +122,7 @@ INSERT INTO `kurikulum` (`id`, `nama`, `tahun`, `semester`) VALUES
 CREATE TABLE `transaksi` (
   `id` int(11) NOT NULL,
   `id_siswa` int(11) NOT NULL,
+  `id_kelas` varchar(128) NOT NULL,
   `bulan_bayar` varchar(128) NOT NULL,
   `tahun_bayar` bigint(20) NOT NULL,
   `jmlh_bayar` bigint(20) NOT NULL,
@@ -130,14 +131,6 @@ CREATE TABLE `transaksi` (
   `tgl_bayar` int(11) NOT NULL,
   `nama_petugas` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `transaksi`
---
-
-INSERT INTO `transaksi` (`id`, `id_siswa`, `bulan_bayar`, `tahun_bayar`, `jmlh_bayar`, `status`, `sisa`, `tgl_bayar`, `nama_petugas`) VALUES
-(29, 8, 'Maret', 2020, 60000, '<span class=\"label label-success\">Lunas</span>', 0, 1662629711, 'Sandi Maulidika'),
-(31, 9, 'Februari', 2022, 600000, '<span class=\"label label-success\">Lunas</span>', 0, 1662644632, 'Sandi Maulidika');
 
 -- --------------------------------------------------------
 
@@ -164,7 +157,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `nohp`, `maps`, `password`, `role_id`, `is_active`, `date_created`) VALUES
 (7, 'Sandi Maulidika', 'sandimaulidika@gmail.com', 'default.jpg', '087801751656', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127504.42574919028!2d104.69292371930901!3d-2.9549663460093805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b75e8fc27a3e3%3A0x3039d80b220d0c0!2sPalembang%2C%20Kota%20Palembang%2C%20Sumatera%20Selatan!5e0!3m2!1sid!2sid!4v1662633404758!5m2!1sid!2sid', '$2y$10$xptqV1Vy4H9.Z9Zb/UXSJuxSfM6uXy2OefVTjfYce1qZuZ0TTWDFi', 1, 1, 1571583076),
-(15, 'Sandi Maulidika', 'infosandemo@gmail.com', 'default.jpg', '', '', '$2y$10$uzhZyrhaASQhRlGMiwxhcuA5Uf9DSmTRblbHsZNqcChZwHIbTWCa6', 3, 1, 1662642156);
+(15, 'Sandi Maulidika', 'infosandemo@gmail.com', 'default.jpg', '087801751656', '', '$2y$10$uzhZyrhaASQhRlGMiwxhcuA5Uf9DSmTRblbHsZNqcChZwHIbTWCa6', 3, 1, 1662642156);
 
 -- --------------------------------------------------------
 
@@ -195,7 +188,8 @@ INSERT INTO `user_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 (14, 1, 8),
 (15, 3, 8),
 (16, 3, 4),
-(17, 1, 2);
+(17, 1, 2),
+(19, 1, 9);
 
 -- --------------------------------------------------------
 
@@ -216,10 +210,11 @@ CREATE TABLE `user_menu` (
 INSERT INTO `user_menu` (`id`, `menu`, `sort`) VALUES
 (1, 'admin', '1'),
 (2, 'user', '2'),
-(3, 'walikelas', '4'),
-(4, 'siswa', '5'),
-(6, 'menu', '7'),
-(8, 'Master', '3');
+(3, 'walikelas', '5'),
+(4, 'siswa', '4'),
+(6, 'menu', '8'),
+(8, 'Master', '3'),
+(9, 'Laporan', '7');
 
 -- --------------------------------------------------------
 
@@ -266,7 +261,6 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 (4, 6, 'Menu Management', 'menu', ' icons-Folder-Add', 1),
 (5, 6, 'Submenu Manage', 'menu/submenu', 'icons-Folder-Cloud', 1),
 (8, 1, 'Role', 'admin/role', 'icon-user', 1),
-(12, 1, 'User Management', 'admin/user', 'ti-face-smile', 0),
 (24, 4, 'Data Siswa', 'siswa', 'icon-people', 1),
 (26, 3, 'Walikelas', 'walikelas', 'icons-Teacher', 1),
 (28, 4, 'Tambah Siswa', 'siswa/tambahsiswa', 'icon-user-follow', 1),
@@ -274,7 +268,10 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 (31, 8, 'Data Iuran', 'master', 'ti-server', 1),
 (32, 8, 'Data Kelas', 'master/kelas', 'ti-harddrives', 1),
 (33, 8, 'Data Kurikulum', 'master/kurikulum', 'icon-book-open', 1),
-(34, 3, 'Tambah W. Kelas', 'walikelas/tambahwalikelas', 'icons-Address-Book', 1);
+(34, 3, 'Tambah W. Kelas', 'walikelas/tambahwalikelas', 'icons-Address-Book', 1),
+(35, 8, 'Laporan', 'master/laporan', 'ti-printer', 1),
+(37, 1, 'Setting', 'admin/setting', 'icon-settings', 1),
+(38, 9, 'Laporan', 'laporan', 'ti-printer', 1);
 
 -- --------------------------------------------------------
 
@@ -309,6 +306,7 @@ INSERT INTO `user_token` (`id`, `email`, `token`, `date_created`) VALUES
 CREATE TABLE `walikelas` (
   `id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
+  `nip` varchar(128) NOT NULL,
   `email` varchar(128) NOT NULL,
   `id_nama_kelas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -317,8 +315,9 @@ CREATE TABLE `walikelas` (
 -- Dumping data for table `walikelas`
 --
 
-INSERT INTO `walikelas` (`id`, `name`, `email`, `id_nama_kelas`) VALUES
-(4, 'Sandi Maulidika', 'infosandemo@gmail.com', 2);
+INSERT INTO `walikelas` (`id`, `name`, `nip`, `email`, `id_nama_kelas`) VALUES
+(4, 'Sandi Maulidika', '149324784', 'infosandemo@gmail.com', 2),
+(5, 'anjeng', '21381928', 'anjeng@gmail.com', 10);
 
 --
 -- Indexes for dumped tables
@@ -428,25 +427,25 @@ ALTER TABLE `kurikulum`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `user_menu`
 --
 ALTER TABLE `user_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user_role`
@@ -458,7 +457,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `user_token`
@@ -470,7 +469,7 @@ ALTER TABLE `user_token`
 -- AUTO_INCREMENT for table `walikelas`
 --
 ALTER TABLE `walikelas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
