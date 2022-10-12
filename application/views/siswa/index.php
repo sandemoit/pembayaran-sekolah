@@ -147,11 +147,11 @@
                         <div class="col-6">
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="nik">Nomor Induk Kependudakan (NIK)</label>
+                                    <label for="nik">NIK</label>
                                     <input type="text" class="form-control" id="nik" name="nik" value="<?= $s['nik']; ?>" maxlength="16" readonly>
                                 </div>
                                 <div class="form-group">
-                                    <label for="nok">Nomor KK (NOK)</label>
+                                    <label for="nok">KK</label>
                                     <input type="text" class="form-control" id="nok" name="nok" maxlength="16" value="<?= $s['nok']; ?>">
                                     <?= form_error('nok', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
@@ -213,7 +213,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="transaksi<?= $s['nik'] ?>">Edit Data Siswa</h5>
+                    <h5 class="modal-title" id="transaksi<?= $s['nik'] ?>">Tambah Transaksi Siswa</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" action="<?= base_url('siswa'); ?>">

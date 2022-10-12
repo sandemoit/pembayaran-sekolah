@@ -5,10 +5,10 @@ class Laporan extends CI_Controller
 {
     public function index()
     {
-        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $data['laporan']    = $this->Laporan_model->getLaporan();
-        $data['title'] = 'Laporan Data Siswa';
-        $data['sum'] = $this->Laporan_model->getSum()->total; //untuk menghitung total pembayaran
+        $data['title']   = 'Laporan Data Siswa';
+        $data['user']    = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['laporan'] = $this->Laporan_model->getLaporan();
+        $data['sum']     = $this->Laporan_model->getSum()->total; //untuk menghitung total pembayaran
 
         $this->load->library('pdfgenerator');
         $file_pdf = 'Laporan Data Siswa';
