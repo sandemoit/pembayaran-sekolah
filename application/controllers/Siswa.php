@@ -14,7 +14,7 @@ class Siswa extends CI_Controller
     public function index()
     {
         $data['title'] = 'Data Siswa';
-        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['siswa'] = $this->Siswas_model->getAllSiswa();
         $data['kelas'] = $this->Siswas_model->getAllKelas();
         $data['iuran'] = $this->Siswas_model->getAllIuran();

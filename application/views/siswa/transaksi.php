@@ -47,7 +47,7 @@
                                     ?>
                                 </td>
                                 <td><?= $t['status']; ?></td>
-                                <td><?= date('d m Y', $t['tgl_bayar']); ?></td>
+                                <td><?= date('d-m-Y', $t['tgl_bayar']); ?></td>
                                 <td><?php $angka = $t['sisa'];
                                     $rupiah = "Rp " . number_format($angka, 2, ',', '.');
                                     echo $rupiah;

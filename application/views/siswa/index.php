@@ -17,6 +17,7 @@
             <div class="ms-auto my-auto mt-lg-0 mt-4">
                 <div class="ms-auto my-auto">
                     <a href="<?= site_url('siswa/tambahsiswa') ?>" class="btn waves-effect waves-light btn-primary">+&nbsp; New Siswa</a>
+                    <a href="" class="btn waves-effect waves-light btn-success" data-bs-toggle="modal" data-bs-target="#tambah">+&nbsp; Upload Excel</a>
                 </div>
             </div>
             <div class="table-responsive mt-3">
@@ -68,6 +69,32 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add Excel -->
+<div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="tambah" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tambah">Upload File Excel Siswa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="<?php echo base_url('walikelas/import_excel') ?>" method="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Pilih File Excel</label>
+                        <input type="file" name="fileExcel">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn waves-effect waves-light btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn waves-effect waves-light btn-info">Add</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -192,6 +219,7 @@
                 <form method="post" action="<?= base_url('siswa'); ?>">
                     <input type="number" name="id" value="<?= $s['id']; ?>" hidden>
                     <input type="text" name="nama_petugas" value="<?= $user['name']; ?>" hidden>
+                    <input type="text" name="id_kelas" value="<?= $siswa['kelas_id']; ?>" hidden>
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="nama_siswa">Nama Siswa</label>

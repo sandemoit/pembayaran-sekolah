@@ -36,6 +36,8 @@ class Siswas_model extends CI_Model
     public function getAllTransaksi()
     {
         $query = "SELECT *
+                    -- FROM `data_siswa` JOIN `transaksi`
+                    -- ON `data_siswa`.`id`= `transaksi`.`id_siswa`
                     FROM `data_siswa` JOIN `transaksi` JOIN `kelas`
                     ON `data_siswa`.`id`= `transaksi`.`id_siswa` AND `kelas`.`id` = `transaksi`.`id_kelas`
         ";
@@ -99,7 +101,6 @@ class Siswas_model extends CI_Model
         } else {
 
             $sisa   = $cek['jmlh_bayar_lunas'] - $jumlahBayar;
-
             if ($sisa <= 0) {
                 $status = '<span class="label label-success">Lunas</span>';
             } else {
@@ -109,6 +110,7 @@ class Siswas_model extends CI_Model
 
         $data = [
             'id_siswa'          => $this->input->post('id', true),
+            'id_kelas'          => $this->input->post('id_kelas', true),
             'bulan_bayar'       => $this->input->post('bulan_bayar', true),
             'tahun_bayar'       => $this->input->post('tahun_bayar', true),
             'jmlh_bayar'        => $this->input->post('jmlh_bayar', true),
@@ -122,7 +124,7 @@ class Siswas_model extends CI_Model
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Selamat! data transaksi siswa berhasil di tambah</div>
             ');
-        redirect('siswa');
+        redirect('siswa/transaksi');
     }
 
     public function editSiswa($nik)
