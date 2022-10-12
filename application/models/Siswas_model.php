@@ -36,10 +36,10 @@ class Siswas_model extends CI_Model
     public function getAllTransaksi()
     {
         $query = "SELECT *
-                    -- FROM `data_siswa` JOIN `transaksi`
-                    -- ON `data_siswa`.`id`= `transaksi`.`id_siswa`
-                    FROM `data_siswa` JOIN `transaksi` JOIN `kelas`
-                    ON `data_siswa`.`id`= `transaksi`.`id_siswa` AND `kelas`.`id` = `transaksi`.`id_kelas`
+                    FROM `data_siswa` JOIN `transaksi`
+                    ON `data_siswa`.`id`= `transaksi`.`id_siswa`
+                    -- FROM `data_siswa` JOIN `transaksi` JOIN `kelas`
+                    -- ON `data_siswa`.`id` = `transaksi`.`id_siswa` AND `kelas`.`id` = `transaksi`.`id_kelas`
         ";
 
         return $this->db->query($query)->result_array();
@@ -110,7 +110,7 @@ class Siswas_model extends CI_Model
 
         $data = [
             'id_siswa'          => $this->input->post('id', true),
-            'id_kelas'          => $this->input->post('id_kelas', true),
+            // 'id_kelas'          => $this->input->post('id_kelas', true),
             'bulan_bayar'       => $this->input->post('bulan_bayar', true),
             'tahun_bayar'       => $this->input->post('tahun_bayar', true),
             'jmlh_bayar'        => $this->input->post('jmlh_bayar', true),

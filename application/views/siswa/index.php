@@ -217,9 +217,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" action="<?= base_url('siswa'); ?>">
-                    <input type="number" name="id" value="<?= $s['id']; ?>" hidden>
-                    <input type="text" name="nama_petugas" value="<?= $user['name']; ?>" hidden>
-                    <input type="text" name="id_kelas" value="<?= $siswa['kelas_id']; ?>" hidden>
+                    <input type="hidden" name="id" value="<?= $s['id']; ?>">
+                    <input type="hidden" name="nama_petugas" value="<?= $user['name']; ?>">
+                    <!-- <input type="hidden" name="id_kelas" value="<?= $siswa['kelas_id']; ?>"> -->
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="nama_siswa">Nama Siswa</label>
@@ -270,6 +270,7 @@
                 <div class="modal-body">
                     <p class="text-danger">Menghapus Data NIK : <b><?= $s['nik'] ?></b></p>
                     <p class="text-danger">Menghapus Data NAMA : <b><?= $s['nama_siswa'] ?></b></p>
+                    <p class="text-danger">Menghapus Data KELAS : <b><?= $s['nama_kelas'] ?></b></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn waves-effect waves-light btn-info" data-bs-dismiss="modal">Close</button>
