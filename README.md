@@ -1,1 +1,1 @@
-email : sandimaulidika password : admin
+email : sandimaulidika@gmail.com password : admin
