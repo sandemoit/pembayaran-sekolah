@@ -149,22 +149,4 @@ class Master extends CI_Controller
             $this->Masters_model->editKurikulum($id);
         }
     }
-
-    public function laporan()
-    {
-        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $data['laporan']    = $this->Laporan_model->getLaporan();
-        $data['title'] = 'Laporan';
-        $data['sum'] = $this->Laporan_model->getSum()->total; //untuk menghitung total pembayaran
-
-        $this->load->library('pdfgenerator');
-        $file_pdf = 'laporan_data';
-        $paper = 'A4';
-        $orientation = "potrait";
-
-        $html = $this->load->view('master/laporan', $data, true);
-
-        // run dompdf
-        $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
-    }
 }

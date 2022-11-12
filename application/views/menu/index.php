@@ -96,7 +96,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php echo base_url('edit') ?>" method="POST">
+                <form action="<?php echo base_url('menu/edit') ?>" method="POST">
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="">Nama Menu</label>
