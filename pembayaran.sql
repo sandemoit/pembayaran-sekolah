@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1deb5ubuntu1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Oct 12, 2022 at 01:57 PM
--- Server version: 10.6.7-MariaDB-2ubuntu1.1
--- PHP Version: 8.1.10
+-- Host: 127.0.0.1
+-- Generation Time: Nov 22, 2022 at 01:16 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -116,6 +116,33 @@ INSERT INTO `kurikulum` (`id`, `nama`, `tahun`, `semester`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `setting`
+--
+
+CREATE TABLE `setting` (
+  `id` int(11) NOT NULL,
+  `nama_sekolah` varchar(128) NOT NULL,
+  `alamat_sekolah` varchar(128) NOT NULL,
+  `nama_kota` varchar(128) NOT NULL,
+  `nohp` varchar(50) NOT NULL,
+  `email_sekolah` varchar(80) NOT NULL,
+  `kepsek` varchar(100) NOT NULL,
+  `nip_kepsek` varchar(50) NOT NULL,
+  `bendahara` varchar(50) NOT NULL,
+  `nip_bendahara` varchar(50) NOT NULL,
+  `logo` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `setting`
+--
+
+INSERT INTO `setting` (`id`, `nama_sekolah`, `alamat_sekolah`, `nama_kota`, `nohp`, `email_sekolah`, `kepsek`, `nip_kepsek`, `bendahara`, `nip_bendahara`, `logo`) VALUES
+(1, 'SMA NEGERI 1 GELUMBANG', 'Jl. Kemerdekaan km 50', 'Muara Enim', '087801751656', 'smansagel@gmail.com', '', '', '', '', '2f634f1e397220c026a684aae4dc8a46.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `transaksi`
 --
 
@@ -131,6 +158,13 @@ CREATE TABLE `transaksi` (
   `tgl_bayar` int(11) NOT NULL,
   `nama_petugas` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`id`, `id_siswa`, `id_kelas`, `bulan_bayar`, `tahun_bayar`, `jmlh_bayar`, `status`, `sisa`, `tgl_bayar`, `nama_petugas`) VALUES
+(35, 8, '', 'Januari', 2024, 8700000, '<span class=\"label label-success\">Lunas</span>', -8100000, 1668234677, 'Sandi Maulidika');
 
 -- --------------------------------------------------------
 
@@ -214,7 +248,7 @@ INSERT INTO `user_menu` (`id`, `menu`, `sort`) VALUES
 (4, 'siswa', '4'),
 (6, 'menu', '8'),
 (8, 'Master', '3'),
-(9, 'Laporan', '7');
+(9, 'Other', '7');
 
 -- --------------------------------------------------------
 
@@ -269,9 +303,8 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 (32, 8, 'Data Kelas', 'master/kelas', 'ti-harddrives', 1),
 (33, 8, 'Data Kurikulum', 'master/kurikulum', 'icon-book-open', 1),
 (34, 3, 'Tambah W. Kelas', 'walikelas/tambahwalikelas', 'icons-Address-Book', 1),
-(35, 8, 'Laporan', 'master/laporan', 'ti-printer', 1),
-(37, 1, 'Setting', 'admin/setting', 'icon-settings', 1),
-(38, 9, 'Laporan', 'laporan', 'ti-printer', 1);
+(37, 9, 'Setting', 'other/setting', 'icon-settings', 1),
+(38, 9, 'Laporan', 'other', 'ti-printer', 1);
 
 -- --------------------------------------------------------
 
@@ -345,6 +378,12 @@ ALTER TABLE `kelas`
 -- Indexes for table `kurikulum`
 --
 ALTER TABLE `kurikulum`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `setting`
+--
+ALTER TABLE `setting`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -424,10 +463,16 @@ ALTER TABLE `kurikulum`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `setting`
+--
+ALTER TABLE `setting`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `user`
